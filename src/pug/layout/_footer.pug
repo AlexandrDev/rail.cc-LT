@@ -1,0 +1,44 @@
+mixin footer-menu(menu)
+  .footer-menu
+    each sub, main in menu
+      .footer-menu__item
+        a(href="")= main
+        if sub
+          .footer-menu__submenu
+            each item in sub
+              .footer-menu__item
+                a(href="")= item
+
+footer.footer
+  .footer-top
+    .footer-top__container.container-xl
+      .row
+        .col-xl-3
+          .footer-top__group
+            +footer-menu(menu1)
+          .footer-top__group
+            +footer-menu(menu2)
+          .footer-top__group
+            +footer-menu(menu3)
+        .col-xl-3
+          .footer-top__group
+            +footer-menu(menu4)
+            .footer-top__group-buttons
+              a(href="").button.button_green Buy Eurail
+        .col-xl-3
+          .footer-top__group
+            +footer-menu(menu5)
+            .footer-top__group-buttons
+              a(href="").button.button_green Buy Interrail
+        .col-xl-3
+          .footer-top__group.footer-top__group_last
+            +footer-menu(menu6)
+            include ../components/_socials
+
+
+  .footer-bottom
+    .footer-bottom__container.container-xl
+      .footer__logo.d-none.d-xl-block
+        +logo('logo-black')
+      .footer-bottom__copyright ©1996-2022 rail.cc | railcc ® is a registered trademark
+      include ../components/_scroll-top

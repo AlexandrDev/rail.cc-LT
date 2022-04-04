@@ -1,0 +1,61 @@
+:root {
+    --dark: #0D0D0D;
+    --grey: #595A5F;
+    --grey-light: #D9DFE4;
+    --link: #2F79DB;
+    --light-blue: #F2F6FA;
+    --green: #62B455;
+    --orange: #F2994A;
+}
+
+/*
+ * Bootstrap 5: override
+ */
+.row {
+    --bs-gutter-x: 16px;
+
+    @include tablet-min {
+        --bs-gutter-x: 20px;
+    }
+
+    @include desktop-min {
+        --bs-gutter-x: 30px;
+    }
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    --bs-gutter-x: 20px;
+
+    @include tablet-min {
+        --bs-gutter-x: 40px;
+    }
+
+    @include desktop-min {
+        --bs-gutter-x: 15px;
+    }
+
+    @include desktop-min {
+        max-width: 1170px;
+    }
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--dark);
+    line-height: 150%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}

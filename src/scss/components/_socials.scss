@@ -1,0 +1,37 @@
+.socials {
+    &__label {
+        color: var(--grey);
+    }
+
+    &__items{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 8px;
+        margin-top: 16px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background: var(--green);
+        border-radius: 2px;
+
+        &:hover {
+            background: #50A444;
+        }
+
+        &:active {
+            background: #449A39;
+        }
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+    }
+}

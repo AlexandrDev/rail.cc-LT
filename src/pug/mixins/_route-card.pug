@@ -1,0 +1,6 @@
+mixin route-card(i, routes)
+  .route-card
+    .route-card__head #{i} route
+    .route-card__route
+      each route in routes
+        span= route

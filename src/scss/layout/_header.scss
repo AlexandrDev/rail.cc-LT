@@ -1,0 +1,17 @@
+.header {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 10;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 19px;
+
+        @include desktop-min {
+            max-width: 1220px;
+            padding-top: 29px;
+        }
+    }
+}

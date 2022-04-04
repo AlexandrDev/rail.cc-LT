@@ -1,0 +1,12 @@
+extends ./layout/_layout
+
+block variables
+  - var title = 'Главная'
+
+block content
+  include sections/_hero
+  include sections/_advantages
+  include sections/_breadcrumbs
+  include sections/_main-routes
+
+  include sections/_following-list-mobile

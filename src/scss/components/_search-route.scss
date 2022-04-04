@@ -1,0 +1,79 @@
+.search-route {
+    @include phone-min {
+        padding: 20px 20px 24px;
+        background: linear-gradient(300.32deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.04) 100.24%);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    @include desktop-min {
+        padding: 32px 32px 40px;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 16px;
+
+        @include desktop-min {
+            margin-bottom: 24px;
+        }
+    }
+
+
+    &-form {
+        &__input-group {
+            position: relative;
+
+            .input-item {
+                &:nth-child(1) {
+                    .input {
+                        border-bottom-right-radius: 0;
+                        border-bottom-left-radius: 0;
+                    }
+                }
+
+                &:nth-child(2) {
+                    margin-top: -1px;
+
+                    .input {
+                        border-top-right-radius: 0;
+                        border-top-left-radius: 0;
+                    }
+                }
+            }
+        }
+
+        &__switch {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            margin: auto;
+            border-radius: 50%;
+            border: 1px solid var(--grey-light);
+            background: #fff;
+
+            &-icon {
+                width: 24px;
+                height: 24px;
+                fill: var(--green);
+            }
+        }
+
+        &__button {
+            width: 100%;
+            margin-top: 16px;
+
+            @include phone-min {
+                height: 48px;
+            }
+        }
+    }
+}
+

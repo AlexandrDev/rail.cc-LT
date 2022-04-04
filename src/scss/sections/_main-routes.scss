@@ -1,0 +1,19 @@
+.main-routes {
+    p {
+        color: var(--grey);
+    }
+
+    &__title {
+        margin: 0 0 8px;
+    }
+
+    &__list {
+        margin-top: 24px;
+        margin-bottom: 24px;
+
+        @include desktop-min {
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+    }
+}

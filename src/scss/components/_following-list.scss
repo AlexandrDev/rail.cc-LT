@@ -1,0 +1,13 @@
+.following-list {
+    @include desktop-min {
+        padding-left: 40px;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__item {
+        margin-top: 24px;
+    }
+}

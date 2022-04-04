@@ -1,0 +1,30 @@
+.advantages {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--grey-light);
+
+    &__items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        column-gap: 60px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+        column-gap: 20px;
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        fill: var(--green);
+    }
+
+    &__text {
+        color: #444752;
+    }
+}

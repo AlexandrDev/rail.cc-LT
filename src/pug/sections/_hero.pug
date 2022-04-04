@@ -1,0 +1,16 @@
+section.hero
+  picture.hero__background
+    source(srcset="images/hero1_md.jpg, images/hero1_md@2x.jpg 2x", media="(max-width:768px)")
+    source(srcset="images/hero1@2x.jpg 2x")
+    img(src="images/hero1.jpg", alt="").hero__background-image
+  .hero__container.container-xl
+    .row
+      .hero__main.col-sm-6
+        h1.hero__title Paris to London by train
+        .hero__text
+          p Travel from Paris (France) to London (United Kingdom) by train (343km): schedule and information to the train connection. Compare fares and buy your ticket.
+        a(href="").hero__button.button.button_orange Ticket information
+          +svg("arrow-down").button__icon
+
+      .col-sm-5.col-xl-4.offset-sm-1.offset-xl-2
+        include ../components/_search-route
