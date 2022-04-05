@@ -1,0 +1,22 @@
+include ../mixins/_card-slide
+
+section.popular-connections.container-xl
+  .cards-slider
+    .cards-slider__title
+      .like-h2 Popular connections travelled by other users
+      .swiper-buttons
+        .swiper-button-prev
+        .swiper-button-next
+
+    .cards-slider__slider.swiper
+      .swiper-wrapper
+        +card-slide('images/slide1.jpg', false, 'title1')
+        +card-slide('images/slide2.jpg', 'date', 'title2')
+        +card-slide('images/slide1.jpg', false, 'title1')
+        +card-slide('images/slide2.jpg', false, 'title2')
+        +card-slide('images/slide2.jpg', false, 'title2')
+        +card-slide('images/slide2.jpg', false, 'title2')
+        +card-slide('images/slide2.jpg', false, 'title2')
+        +card-slide('images/slide2.jpg', false, 'title2')
+
+      .swiper-pagination

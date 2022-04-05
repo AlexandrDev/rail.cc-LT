@@ -1,0 +1,124 @@
+.swiper {
+    @include desktop {
+        overflow: visible;
+    }
+
+    @include desktop-min {
+        &:after {
+            content: '';
+            display: block;
+            width: 68px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+            transition: all .2s ease;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        &-is-end:after {
+            opacity: 0;
+        }
+    }
+
+    &-buttons {
+        display: none;
+
+        @include desktop-min {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-shrink: 0;
+        }
+    }
+
+    @include desktop-min {
+        &-button {
+            &-next,
+            &-prev {
+                position: static;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                background: #fff;
+                border: 1px solid var(--grey-light);
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                transition: all .2s ease;
+                cursor: pointer;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 9px;
+                    height: 16px;
+                    background: url($imagesPath + 'arrow-slider-right.svg') center/contain no-repeat;
+                }
+
+                &:hover {
+                    background: var(--light-blue);
+                }
+
+                &:active {
+                    background: #E9F0F7;
+                }
+
+                &:focus:not([class*='disabled']) {
+                    border-color: var(--link);
+                    z-index: 11;
+                }
+            }
+
+            &-prev {
+                right: 50px;
+                margin-right: -1px;
+                transform: rotate(180deg);
+            }
+
+            &-disabled {
+                pointer-events: none;
+                opacity: .2;
+            }
+
+            &-lock {
+                display: none;
+            }
+        }
+    }
+
+    &-pagination {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 7px;
+        margin-top: 20px;
+
+        @include desktop-min {
+            margin-top: 32px;
+        }
+
+        &-lock {
+            display: none;
+        }
+
+        &-bullet {
+            display: block;
+            width: 4px;
+            height: 4px;
+            background: var(--grey-light);
+            border-radius: 50%;
+            cursor: pointer;
+
+            &-active {
+                width: 7px;
+                height: 7px;
+                background: var(--orange);
+            }
+        }
+    }
+}

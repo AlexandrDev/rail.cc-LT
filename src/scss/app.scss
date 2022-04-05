@@ -1,3 +1,5 @@
+$imagesPath: '../images/';
+
 @import "mixins";
 @import "gui";
 
@@ -5,22 +7,27 @@
 @import "components/input";
 @import "components/button";
 @import "components/dropdown";
+
+@import "layout/header";
+@import "layout/footer";
+
 @import "components/logo";
 @import "components/hamburger";
 @import "components/language";
 @import "components/main-menu";
 @import "components/mobile-menu";
-@import "components/search-route";
+@import "components/footer-menu";
 @import "components/scroll-top";
 @import "components/socials";
-@import "components/footer-menu";
+@import "components/search-route";
 @import "components/route-path";
-
-@import "layout/header";
-@import "layout/footer";
+@import "components/following-list";
+@import "components/swiper";
+@import "components/cards-slider";
+@import "components/card-slide";
 
 @import "sections/hero";
 @import "sections/advantages";
 @import "sections/breadcrumbs";
 @import "sections/main-routes";
-@import "components/following-list";
+@import "sections/popular-connections";

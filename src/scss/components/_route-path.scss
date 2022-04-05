@@ -34,7 +34,7 @@
                     width: 20px;
                     height: 20px;
                     flex-shrink: 0;
-                    background: url('../images/arrow-blue-right.svg') center/contain no-repeat;
+                    background: url($imagesPath + 'arrow-blue-right.svg') center/contain no-repeat;
                 }
             }
         }

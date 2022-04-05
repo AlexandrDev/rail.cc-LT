@@ -1,0 +1,16 @@
+.cards-slider {
+    &__title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__slider {
+        margin-top: 20px;
+
+        @include desktop-min {
+            margin-top: 32px;
+        }
+    }
+}
