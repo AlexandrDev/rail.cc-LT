@@ -1,4 +1,9 @@
+include ../mixins/_following-list-item
+
 .following-list
   h3.following-list__title The following links could be interesting for you
-  .following-list__item
-    | asd
+  .row
+    +following-list-item('Train types', 'Train types you are likely to travel with.', 'Eurostar (EST)')
+    +following-list-item('Ferry', 'Ferry connections that might be helpful.', 'Calais — Dover')
+    +following-list-item('Train connections', 'popular connections travelled by other users.', 'London — Paris')
+    +following-list-item('Train schedule', 'Online timetable information, on which you can find relevant, up-to-date connections.', 'rail.cc Deutsche Bahn')

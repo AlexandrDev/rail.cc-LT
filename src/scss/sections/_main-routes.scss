@@ -1,4 +1,9 @@
 .main-routes {
+
+    @include desktop-min {
+        margin-bottom: 112px;
+    }
+
     p {
         color: var(--grey);
     }
