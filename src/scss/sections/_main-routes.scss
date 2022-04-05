@@ -16,4 +16,21 @@
             margin-bottom: 32px;
         }
     }
+
+    &__card {
+        padding: 20px;
+        background: var(--light-blue);
+
+        @include desktop-min {
+            padding: 24px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        .route-path {
+
+        }
+    }
 }

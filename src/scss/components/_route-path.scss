@@ -1,0 +1,42 @@
+.route-path {
+    &__head {
+        width: max-content;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 2px 8px;
+        margin-bottom: 16px;
+        background: var(--green);
+        border-radius: 2px;
+    }
+
+    &__route {
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--link);
+        margin-bottom: -8px;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 8px;
+            margin-bottom: 8px;
+
+            &:not(:last-child) {
+                margin-right: 8px;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    flex-shrink: 0;
+                    background: url('../images/arrow-blue-right.svg') center/contain no-repeat;
+                }
+            }
+        }
+    }
+}
