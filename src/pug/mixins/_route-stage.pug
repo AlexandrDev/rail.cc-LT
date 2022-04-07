@@ -1,0 +1,24 @@
+include ../mixins/_booking-item
+
+mixin route-stage(num, from, to)
+  .route-stage
+    .route-stage__title-group
+      .route-stage__num= num
+      .route-stage__title.like-h2
+        | Travelling from
+        span= from
+        |  to
+        span= to
+
+    .route-stage__content
+      .route-stage__text.js-showMore
+        p The fastest way to travel from Paris to London is by Eurostar high-speed-train. The journey time is only 2,5 hours from city center to city center. Ticket fares start from 57 EUR. There are 15 or more Eurostar connections every day.
+        p Find the exact train-schedule and saver-fares via our booking links. As earlier you book, as cheaper the ticket prices are.
+        p If you want to travel cheaper, you could use a bus. The journey time is much longer with nine hours. But the tickets are much cheaper and start from 14 EUR. Companies like Flixbus offer several connections per day, also over-night. The bus tickets are available via our booking links.
+
+      .route-stage__booking.booking
+        .like-h3 Where to buy a ticket from Berlin to Paris?
+        .route-stage__booking-list.row
+          +booking-item('images/partner1.svg', 'Trainline', 'Without extra service charges', 'text').col-md-6.col-xl-12
+          +booking-item('images/partner2.svg', 'Trainline', 'Without extra service charges', 'text').col-md-6.col-xl-12
+          +booking-item('images/partner3.svg', 'Trainline', 'Without extra service charges', 'text').col-md-6.col-xl-12

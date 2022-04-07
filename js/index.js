@@ -1,0 +1,6 @@
+$(function($) {
+    /*
+     * Search route form
+     */
+
+})

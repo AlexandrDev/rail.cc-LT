@@ -1,0 +1,14 @@
+mixin booking-item(img, name, sub, text)
+  .booking-item&attributes(attributes)
+    .booking-item__inner
+      .booking-item__content
+        .booking-item__top
+          .booking-item__title-group
+            .booking-item__title= name
+            .booking-item__sub= sub
+          .booking-item__logo
+            img(src= img, alt="")
+        .booking-item__text= text
+      .booking-item__buttons
+        a(href="").booking-item__button.button.button_orange Buy here
+        a(href="").booking-item__button.button.button_green Check times and prises

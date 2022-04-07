@@ -48,6 +48,11 @@ img {
   max-width: 100%;
 }
 
+.section {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -56,6 +61,7 @@ a {
 
 .link {
   color: var(--link);
+  cursor: pointer;
 }
 
 .link:hover {
@@ -66,10 +72,20 @@ a {
   background-color: var(--light-blue);
 }
 
+.link_more {
+  font-size: 14px;
+  line-height: 24px;
+  border-bottom: 1px dashed;
+}
+
 p {
   font-size: 16px;
   line-height: 26px;
   margin-top: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
 }
 
 h1,
@@ -767,6 +783,7 @@ h4,
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
@@ -783,7 +800,7 @@ h4,
   font-size: 16px;
   line-height: 24px;
   color: var(--link);
-  margin-bottom: -8px;
+  margin-bottom: -4px;
 }
 
 .route-path__route span {
@@ -791,7 +808,7 @@ h4,
   align-items: center;
   -moz-column-gap: 8px;
   column-gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .route-path__route span:not(:last-child) {
@@ -805,6 +822,151 @@ h4,
   height: 20px;
   flex-shrink: 0;
   background: url("../images/arrow-blue-right.svg") center/contain no-repeat;
+}
+
+.route-stage {
+  position: relative;
+}
+
+.route-stage__title-group {
+  display: flex;
+  align-items: flex-start;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+}
+
+.route-stage__title span {
+  color: var(--link);
+}
+
+.route-stage__num {
+  width: 36px;
+  height: 32px;
+  border-radius: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffff;
+  text-align: center;
+  background: var(--green);
+}
+
+.route-stage__content {
+  margin-top: 16px;
+}
+
+.route-stage__text {
+  position: relative;
+  color: var(--grey);
+}
+
+.route-stage__text.part-hidden {
+  height: 5em;
+  padding-bottom: 0.5em;
+  overflow: hidden;
+}
+
+.route-stage__text.part-hidden:after {
+  content: "";
+  display: block;
+  height: 1.5em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--light-blue);
+  z-index: 1;
+}
+
+.route-stage__text.part-hidden .show-more {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.route-stage__text .show-more {
+  margin-top: 8px;
+}
+
+.route-stage__booking {
+  margin-top: 32px;
+}
+
+.route-stage__booking-list {
+  margin-top: 24px;
+}
+
+.booking-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.booking-item__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px 20px 32px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 16px #D9DFE4;
+  border-radius: 2px;
+}
+
+.booking-item__content {
+  flex-grow: 1;
+}
+
+.booking-item__top {
+  display: flex;
+  align-items: flex-start;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+}
+
+.booking-item__title-group {
+  order: 1;
+  flex-grow: 1;
+}
+
+.booking-item__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.booking-item__sub {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--green);
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.booking-item__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  order: 2;
+  width: 126px;
+  height: 68px;
+  padding: 15px 11px;
+}
+
+.booking-item__text {
+  margin-top: 20px;
+  color: var(--grey);
+}
+
+.booking-item__button {
+  display: flex;
+  min-width: 240px;
+}
+
+.booking-item__button:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .following-list__title {
@@ -1044,6 +1206,10 @@ h4,
   margin-right: 8px;
 }
 
+.main-routes {
+  margin-top: 0;
+}
+
 .main-routes p {
   color: var(--grey);
 }
@@ -1066,25 +1232,32 @@ h4,
   margin-bottom: 16px;
 }
 
-.popular-connections {
-  margin-top: 48px;
-  margin-bottom: 48px;
-}
-
-.blog-slider {
-  margin-top: 48px;
-  margin-bottom: 48px;
-}
-
 .blog-slider__buttons {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.partners-slider {
+.route-detailed {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background: var(--light-blue);
+}
+
+.route-detailed .route-path__head {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.route-detailed__stages {
   margin-top: 48px;
-  margin-bottom: 48px;
+}
+
+.route-detailed .route-stage:not(:last-child) {
+  padding-bottom: 48px;
 }
 
 @media screen and (min-width: 576px) {
@@ -1102,6 +1275,10 @@ h4,
 
   .search-route-form__button {
     height: 48px;
+  }
+
+  .booking-item:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   .hero {
@@ -1139,6 +1316,12 @@ h4,
     column-count: 3;
   }
 
+  .booking-item__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
   .hero__background {
     height: 100%;
     border-radius: 0;
@@ -1165,6 +1348,11 @@ h4,
   .container-sm,
   .container-xl {
     max-width: 1170px;
+  }
+
+  .section {
+    margin-top: 114px;
+    margin-bottom: 114px;
   }
 
   h1,
@@ -1242,6 +1430,98 @@ h4,
 
   .search-route__title {
     margin-bottom: 24px;
+  }
+
+  .route-path__route {
+    margin-bottom: -8px;
+  }
+
+  .route-path__route span {
+    margin-bottom: 8px;
+  }
+
+  .route-stage:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 17px;
+    bottom: 0;
+    display: block;
+    border-right: 2px dashed var(--grey-light);
+    z-index: 0;
+  }
+
+  .route-stage__title-group {
+    position: relative;
+    -moz-column-gap: 32px;
+    column-gap: 32px;
+    z-index: 1;
+  }
+
+  .route-stage__num {
+    height: 38px;
+    font-size: 22px;
+    line-height: 38px;
+  }
+
+  .route-stage__content {
+    padding-left: 68px;
+    margin-top: 24px;
+  }
+
+  .route-stage__booking {
+    margin-top: 48px;
+  }
+
+  .route-stage__booking-list {
+    margin-top: 40px;
+  }
+
+  .booking-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .booking-item__inner {
+    flex-direction: row;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    padding: 40px;
+    box-shadow: 0 4px 60px rgba(217, 223, 228, 0.4);
+  }
+
+  .booking-item__top {
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+  }
+
+  .booking-item__title-group {
+    order: 2;
+    padding-top: 10px;
+  }
+
+  .booking-item__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .booking-item__sub {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+  }
+
+  .booking-item__logo {
+    order: 1;
+  }
+
+  .booking-item__text {
+    margin-top: 24px;
+  }
+
+  .booking-item__buttons {
+    align-self: flex-end;
   }
 
   .following-list {
@@ -1381,7 +1661,7 @@ h4,
   }
 
   .main-routes {
-    margin-bottom: 112px;
+    margin-top: 0;
   }
 
   .main-routes__list {
@@ -1393,23 +1673,48 @@ h4,
     padding: 24px;
   }
 
-  .popular-connections {
-    margin-top: 114px;
-    margin-bottom: 114px;
-  }
-
-  .blog-slider {
-    margin-top: 114px;
-    margin-bottom: 114px;
-  }
-
   .blog-slider__buttons {
     margin-top: 32px;
   }
 
-  .partners-slider {
-    margin-top: 114px;
-    margin-bottom: 100px;
+  .route-detailed {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .route-detailed .route-path__head {
+    font-size: 22px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+
+  .route-detailed .route-path__route {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .route-detailed .route-path__route span {
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+  }
+
+  .route-detailed .route-path__route span:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  .route-detailed .route-path__route span:not(:last-child):after {
+    width: 24px;
+    height: 24px;
+  }
+
+  .route-detailed__stages {
+    margin-top: 60px;
+  }
+
+  .route-detailed .route-stage:not(:last-child) {
+    padding-bottom: 140px;
   }
 }
 
@@ -1433,6 +1738,10 @@ h4,
 
   .footer-top__group-buttons {
     margin-bottom: 12px;
+  }
+
+  .booking-item__buttons {
+    margin-top: 24px;
   }
 
   .following-list {
@@ -1505,5 +1814,9 @@ h4,
 
   .footer-top .socials {
     flex-basis: 33.333333%;
+  }
+
+  .booking-item__text {
+    font-weight: 700;
   }
 }
