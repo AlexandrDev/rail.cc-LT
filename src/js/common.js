@@ -50,4 +50,34 @@ $(function($) {
     }
 
     $body.mobileMenu()
+
+
+    /*
+     * Slider
+     */
+    $('.slider').each(function () {
+        let $el = $(this).find('.swiper');
+
+        let swiper = new Swiper($el[0], {
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: $(this).find('.swiper-button-next')[0],
+                prevEl: $(this).find('.swiper-button-prev')[0],
+            },
+            pagination: {
+                el: $(this).find('.swiper-pagination')[0],
+                clickable: true
+            }
+        })
+
+        swiper.on('slideChange', function () {
+            if (swiper.isEnd) {
+                $el.addClass('swiper-is-end')
+            } else {
+                $el.removeClass('swiper-is-end')
+            }
+        });
+
+
+    })
 })

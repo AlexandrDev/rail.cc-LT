@@ -1,0 +1,25 @@
+.blog-slider {
+    margin-top: 48px;
+    margin-bottom: 48px;
+
+    @include desktop-min {
+        margin-top: 114px;
+        margin-bottom: 114px;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        @include desktop-min {
+            margin-top: 32px;
+        }
+    }
+
+    &__button {
+        @include tablet {
+            width: 100%;
+        }
+    }
+}

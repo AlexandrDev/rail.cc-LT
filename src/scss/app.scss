@@ -22,12 +22,16 @@ $imagesPath: '../images/';
 @import "components/search-route";
 @import "components/route-path";
 @import "components/following-list";
+@import "components/slider";
 @import "components/swiper";
-@import "components/cards-slider";
 @import "components/card-slide";
+@import "components/partner-slide";
 
 @import "sections/hero";
 @import "sections/advantages";
 @import "sections/breadcrumbs";
 @import "sections/main-routes";
 @import "sections/popular-connections";
+@import "sections/blog-slider";
+@import "sections/partners-slider";
+@import "sections/route-detailed";

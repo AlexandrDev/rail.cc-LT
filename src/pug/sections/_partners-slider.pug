@@ -1,0 +1,22 @@
+include ../mixins/_partner-slide
+
+section.partners-slider.container-xl
+  .slider
+    .slider__title
+      .partners-slider__title.like-h2 Partners
+      .swiper-buttons
+        .swiper-button-prev
+        .swiper-button-next
+
+    .slider__element.swiper
+      .swiper-wrapper
+        +partner-slide('images/partner1.svg')
+        +partner-slide('images/partner2.svg')
+        +partner-slide('images/partner3.svg')
+        +partner-slide('images/partner4.svg')
+        +partner-slide('images/partner4.svg')
+        +partner-slide('images/partner4.svg')
+        +partner-slide('images/partner4.svg')
+        +partner-slide('images/partner4.svg')
+
+      .swiper-pagination

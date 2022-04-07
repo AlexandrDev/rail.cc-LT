@@ -55,10 +55,10 @@ $(function($) {
     /*
      * Slider
      */
-    $('.cards-slider').each(function () {
-        let el = '.cards-slider__slider';
+    $('.slider').each(function () {
+        let $el = $(this).find('.swiper');
 
-        let swiper = new Swiper(el, {
+        let swiper = new Swiper($el[0], {
             slidesPerView: 'auto',
             navigation: {
                 nextEl: $(this).find('.swiper-button-next')[0],
@@ -72,9 +72,9 @@ $(function($) {
 
         swiper.on('slideChange', function () {
             if (swiper.isEnd) {
-                $(el).addClass('swiper-is-end')
+                $el.addClass('swiper-is-end')
             } else {
-                $(el).removeClass('swiper-is-end')
+                $el.removeClass('swiper-is-end')
             }
         });
 

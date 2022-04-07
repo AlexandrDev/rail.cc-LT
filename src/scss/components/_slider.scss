@@ -1,4 +1,4 @@
-.cards-slider {
+.slider {
     &__title {
         position: relative;
         display: flex;
@@ -6,7 +6,7 @@
         justify-content: space-between;
     }
 
-    &__slider {
+    &__element {
         margin-top: 20px;
 
         @include desktop-min {
