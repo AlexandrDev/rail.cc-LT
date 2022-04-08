@@ -840,6 +840,7 @@ h4,
 }
 
 .route-stage__num {
+  flex-shrink: 0;
   width: 36px;
   height: 32px;
   border-radius: 2px;
