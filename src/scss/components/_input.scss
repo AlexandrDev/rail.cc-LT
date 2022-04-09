@@ -10,4 +10,13 @@
     border: 1px solid var(--grey-light);
     border-radius: 2px;
     background: #fff;
+    transition: all .2s ease;
+
+    &:focus-visible {
+        border: 1px solid var(--link);
+    }
+
+    &:focus {
+        border: 1px solid var(--green);
+    }
 }

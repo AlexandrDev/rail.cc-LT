@@ -26,6 +26,8 @@
             position: relative;
 
             .input-item {
+                position: relative;
+
                 &:nth-child(1) {
                     .input {
                         border-bottom-right-radius: 0;
@@ -42,9 +44,18 @@
                     }
                 }
             }
+
+            .input {
+                &:focus {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
         }
 
-        &__switch {
+        &__swap {
+            $swapBtn: &;
+
             position: absolute;
             top: 0;
             bottom: 0;
@@ -57,12 +68,37 @@
             margin: auto;
             border-radius: 50%;
             border: 1px solid var(--grey-light);
+            outline: 0;
             background: #fff;
+            z-index: 2;
+
+            &:hover {
+                background: var(--green);
+                border-color: var(--green);
+
+                #{$swapBtn}-icon {
+                    fill: #fff;
+                }
+            }
+
+            &:focus-visible {
+                border: 1px solid var(--link);
+            }
+
+            &:active {
+                background: #449A39;
+                border-color: #449A39;
+
+                #{$swapBtn}-icon {
+                    fill: #fff;
+                }
+            }
 
             &-icon {
                 width: 24px;
                 height: 24px;
                 fill: var(--green);
+                transition: all .2s ease;
             }
         }
 
@@ -72,6 +108,36 @@
 
             @include phone-min {
                 height: 48px;
+            }
+        }
+
+        .results-list {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 4px 60px rgba(26, 41, 20, 0.4);
+            border-radius: 2px;
+            z-index: 10;
+
+            &__item {
+                display: block;
+                padding: 12px 20px;
+                color: var(--dark);
+                border-bottom: 1px solid var(--grey-light);
+                cursor: pointer;
+                transition: all .2s ease;
+
+                &:hover,
+                &_selected {
+                    background-color: var(--light-blue);
+                }
+
+                &_highlight {
+                    color: var(--green);
+                    background: none;
+                }
             }
         }
     }

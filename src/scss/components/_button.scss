@@ -14,7 +14,7 @@
     cursor: pointer;
     transition: all .16s ease;
 
-    &:focus:not(:active) {
+    &:focus-visible {
         outline: 1px solid var(--link);
     }
 
