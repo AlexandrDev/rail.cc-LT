@@ -64,6 +64,10 @@
                     }
 
                     &__item {
+                        @include desktop {
+                            break-after: avoid-column;
+                        }
+
                         @include desktop-min {
                             margin-bottom: 32px;
                         }

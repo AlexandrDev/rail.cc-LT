@@ -97,6 +97,10 @@
         height: 68px;
         padding: 15px 11px;
 
+        img {
+            max-height: 100%;
+        }
+
         @include desktop-min {
             order: 1;
         }

@@ -21,6 +21,10 @@
         height: 100%;
         padding: 11px 9px;
 
+        img {
+            max-height: 100%;
+        }
+
         @include desktop-min {
             padding: 19px 15px;
         }
