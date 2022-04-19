@@ -20,7 +20,7 @@ mixin mobileMenuItemLang(langs)
     a(href="")
       span.mobile-menu__language-label
         img(src="images/lang-ru.jpg", alt="")
-        | Russian
+        =langs[0]
       +svg('arrow-mobile-menu').mobile-menu__arrow
     .mobile-menu__submenu
       .mobile-menu__submenu-top
@@ -31,7 +31,7 @@ mixin mobileMenuItemLang(langs)
           a(href="")
             span.mobile-menu__language-label
               img(src="images/lang-ru.jpg", alt="")
-              | lang
+              =lang
 
 .mobile-menu-overlay
 .mobile-menu
@@ -46,7 +46,7 @@ mixin mobileMenuItemLang(langs)
       +mobileMenuItem(menu2)
       +mobileMenuItem({'Forum': false})
       +mobileMenuItem({'Blog': false})
-      +mobileMenuItemLang(['Russian', 'Russian', 'Russian'])
+      +mobileMenuItemLang(langs)
 
       .mobile-menu__socials
         include ../components/_socials

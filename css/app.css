@@ -393,24 +393,37 @@ h4,
   background-color: var(--green);
 }
 
-.language__item {
-  display: flex;
-  align-items: center;
-  color: inherit;
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--grey-light);
+.language__items {
+  position: relative;
+  -moz-column-count: 3;
+  column-count: 3;
+  -moz-column-gap: 0;
+  column-gap: 0;
 }
 
-.language__item:last-child {
-  border-bottom: 0;
+.language__items:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--light-blue);
+}
+
+.language__item {
+  display: block;
+  min-width: 140px;
+  color: inherit;
+  padding: 12px 20px 12px 16px;
+  column-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  border-bottom: 1px solid var(--light-blue);
 }
 
 .language__item:hover {
   background-color: var(--light-blue);
-}
-
-.language__item span {
-  margin-left: 8px;
 }
 
 .main-menu {
