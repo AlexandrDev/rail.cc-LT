@@ -1,0 +1,77 @@
+.footer {
+    color: var(--white);
+    background-color: #1D1B1A;
+
+    &__row {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid var(--grey);
+
+        @include lg {
+            padding-top: 56px;
+            padding-bottom: 56px;
+        }
+    }
+
+    &__bottom {
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        @include lg {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+    }
+
+    &__subscription {
+        @include md {
+            display: flex;
+            align-items: flex-start;
+            column-gap: 24px;
+        }
+
+        @include lg {
+            column-gap: 40px;
+        }
+
+        .socials {
+            &__item {
+                @include md-max {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+
+        &-text {
+            @include md-max {
+                margin-top: 24px;
+            }
+
+            p {
+                margin-top: 16px;
+
+                @include md-max {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                @include lg {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+
+    &__links-groups {
+        @include lg-max {
+            --bs-gutter-x: 40px;
+        }
+    }
+
+    &__menus {
+        @include lg-max {
+            row-gap: 32px;
+        }
+    }
+}

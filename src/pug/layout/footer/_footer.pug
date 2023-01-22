@@ -1,0 +1,44 @@
+footer.footer
+  .footer__row
+    .container-xl
+      .footer__subscription
+        +socials()
+        .footer__subscription-text
+          .like-h4 Подпишитесь, чтобы не пропустить ничего важного
+          p Предлагаем проверенные рекомендации и лайфхаки для путешествий на поездах.
+  .footer__row
+    .container-xl
+      .footer__links-groups.row
+        for col in [1,2]
+          .footer-links-group.col-lg-6
+            .footer-links-group__title.like-h4 Interrail
+            .footer-links-group__links.links-list
+              for link in ['Eurail','Eurail Global Pass','Eurail Select Pass','Eurail ONE Country Pass','How to Eurail','First time Eurail','Eurail train reservations','Eurail night trains','Eurail ferries','Eurail buses','Search Eurail route']
+                .links-list__item
+                  a(href="#")= link
+            .footer-links-group__buttons
+              a(href="#").footer-links-group__button.button.button_red.button_thin Buy Eurail
+  .footer__row
+    .container-xl
+      .footer__menus.row
+        .col-md-3.col-6
+          .links-list
+            for link in ['About Rail.cc','How it works','Blog','F.A.Q.','Contact','Imprint']
+              .links-list__item.links-list__item_bold
+                a(href="#")= link
+        for col in [1,2,3]
+          .col-md-3.col-6
+            .links-list
+              .links-list__item.links-list__item_bold
+                a(href="#") Train tickets
+              for link in ['Search train route','Night train','Train company']
+                .links-list__item
+                  a(href="#")= link
+  .footer__bottom
+    .container-xl
+      .footer-copyright
+        .footer-copyright__logo
+          +logo('logo-light')
+        .footer-copyright__link
+          a(href="#").link Cookies
+        .footer-copyright__text ©1996-2022 rail.cc | railcc ® is a registered trademark

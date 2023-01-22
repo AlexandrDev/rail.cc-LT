@@ -1,0 +1,39 @@
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  flex-wrap: wrap;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include lg-max {
+    row-gap: 26px;
+  }
+
+  @include lg {
+    column-gap: 32px;
+  }
+
+  &__logo {
+    @include lg-max {
+      flex: 1;
+    }
+
+    .logo {
+      width: 93px;
+    }
+  }
+
+  &__link {
+    @include lg-max {
+      flex: 1;
+    }
+  }
+
+  &__text {
+    @include lg-max {
+      width: 100%;
+    }
+  }
+}

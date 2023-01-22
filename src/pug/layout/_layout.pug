@@ -1,13 +1,8 @@
 include ../mixins/_svg
 include ../mixins/_logo
+include ../mixins/_socials
 
-- var langs = ['čeština','Dansk','Deutsch','Eesti','Espanol','Français','Italiano','Latvisks','Lietuvių','Magyar','Nederlands','Norsk','Polski','Português','Română','Slovene','Polski','Português','Română','Slovene','Slovenský','Suomi','Svenska','Tiếng việt','Türkçe','ελληνικά','Български','Русский','Українська','العربية','فارسی','ภาษาไทย','中文','日本語','한국어'];
-- var menu1 = {'Train tickets': ['Search train route', 'Night train', 'Train company']};
-- var menu2 = {'Rail passes': ['Britrail Pass', 'German Rail Pass', 'Swiss Travel Pass', 'Renfe Spain Pass', 'Balkan Flexi Pass']};
-- var menu3 = {'Travel guide': ['Travel tours', 'Train types', 'Train travel in ...', 'Ferry connections', 'Bus tickets', 'Countries']};
-- var menu4 = {'Eurail': ['Eurail', 'Eurail Global Pass', 'Eurail Select Pass', 'Eurail ONE Country Pass', 'how to Eurail', 'first time Eurail', 'Eurail train reservations', 'Eurail night trains', 'Eurail ferries', 'Eurail buses', 'Search Eurail route', 'Eurail in ...', 'Eurail offers and discounts']};
-- var menu5 = {'Interrail': ['Interrail', 'Interrail Global Pass', 'Interrail One Country Pass', 'First time Interrail', 'How to Interrail', 'Interrail train reservations', 'Interrail night trains', 'Interrail ferries', 'Interrail buses', 'Search Interrail route', 'Interrail country overview', 'Interrail offers and discounts']};
-- var menu6 = {'F.A.Q.': false, 'Blog': false, 'Forum': false, 'About Rail.cc': false, 'Imprint': false, 'Contact': false, 'Cookies': false};
+- var images_path = 'images/';
 
 block variables
 
@@ -16,9 +11,6 @@ html(lang="ru")
   head
     title #{title}
     meta(charset="UTF-8")
-    meta#mvp(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1")
-    script
-      | function svp(){let e=screen.width<=375?"width=375,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}svp();window.onresize=function(n){svp()}
     link(rel='apple-touch-icon' sizes='180x180' href='images/favicon/apple-touch-icon.png')
     link(rel='icon' type='image/png' sizes='32x32' href='images/favicon/favicon-32x32.png')
     link(rel='icon' type='image/png' sizes='16x16' href='images/favicon/favicon-16x16.png')
@@ -27,23 +19,15 @@ html(lang="ru")
     meta(name='theme-color' content='#ffffff')
     link(rel="preconnect" href='https://fonts.googleapis.com')
     link(rel="preconnect" href='https://fonts.gstatic.com', crossorigin)
-    link(rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@500;600;700&display=swap')
-    link(rel="stylesheet" href='css/normalize.min.css')
-    link(rel="stylesheet" href='css/bootstrap-grid.min.css')
-    link(rel="stylesheet" href='css/swiper.min.css')
+    link(rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap')
     link(rel="stylesheet" href='css/app.min.css')
-  body
-    include _header
+  body(class=body_class)
+    include header/_header
 
-    main.page
+    main.page-content
       block content
 
-    include _footer
+    include footer/_footer
 
-    script(src="js/jquery3.min.js", defer)
-    script(src="js/bootstrap.bundle.min.js", defer)
-    script(src="js/swiper-bundle.min.js", defer)
-    script(src="js/autoComplete.min.js", defer)
-    script(src="js/vue3.prod.js", defer)
-    script(src="js/common.min.js", defer)
-    script(src="js/index.min.js", defer)
+    script(src="js/vendor.min.js", defer)
+    script(src="js/app.min.js", defer)

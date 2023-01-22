@@ -3,8 +3,6 @@
   <head>
     <title>Главная</title>
     <meta charset="UTF-8">
-    <meta id="mvp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <script>function svp(){let e=screen.width<=375?"width=375,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}svp();window.onresize=function(n){svp()}</script>
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -13,209 +11,217 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Raleway:wght@500;600;700&amp;display=swap">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap">
     <link rel="stylesheet" href="css/app.min.css">
   </head>
   <body>
     <header class="header">
       <div class="header__container container-xl">
         <div class="header__logo">
-          <div class="logo"><a href=""><img class="logo__image" src="./images/logo.svg" alt=""/></a></div>
-        </div>
-        <div class="header__menu">
-          <div class="main-menu-wrapper d-none d-xl-block">
-            <div class="main-menu">
-                        <div class="main-menu__item main-menu__item_parent"><a href="">Train tickets
-                            <svg class="main-menu__arrow">
-                              <use xlink:href="images/sprite.svg#arrow-dropdown"></use>
-                            </svg></a>
-                          <div class="main-menu__submenu">
-                            <div class="main-menu__item"><a href="">Search train route</a></div>
-                            <div class="main-menu__item"><a href="">Night train</a></div>
-                            <div class="main-menu__item"><a href="">Train company</a></div>
-                          </div>
-                        </div>
-                        <div class="main-menu__item main-menu__item_parent"><a href="">Interrail
-                            <svg class="main-menu__arrow">
-                              <use xlink:href="images/sprite.svg#arrow-dropdown"></use>
-                            </svg></a>
-                          <div class="main-menu__submenu">
-                            <div class="main-menu__item"><a href="">Interrail</a></div>
-                            <div class="main-menu__item"><a href="">Interrail Global Pass</a></div>
-                            <div class="main-menu__item"><a href="">Interrail One Country Pass</a></div>
-                            <div class="main-menu__item"><a href="">First time Interrail</a></div>
-                            <div class="main-menu__item"><a href="">How to Interrail</a></div>
-                            <div class="main-menu__item"><a href="">Interrail train reservations</a></div>
-                            <div class="main-menu__item"><a href="">Interrail night trains</a></div>
-                            <div class="main-menu__item"><a href="">Interrail ferries</a></div>
-                            <div class="main-menu__item"><a href="">Interrail buses</a></div>
-                            <div class="main-menu__item"><a href="">Search Interrail route</a></div>
-                            <div class="main-menu__item"><a href="">Interrail country overview</a></div>
-                            <div class="main-menu__item"><a href="">Interrail offers and discounts</a></div>
-                          </div>
-                        </div>
-                        <div class="main-menu__item main-menu__item_parent"><a href="">Rail passes
-                            <svg class="main-menu__arrow">
-                              <use xlink:href="images/sprite.svg#arrow-dropdown"></use>
-                            </svg></a>
-                          <div class="main-menu__submenu">
-                            <div class="main-menu__item"><a href="">Britrail Pass</a></div>
-                            <div class="main-menu__item"><a href="">German Rail Pass</a></div>
-                            <div class="main-menu__item"><a href="">Swiss Travel Pass</a></div>
-                            <div class="main-menu__item"><a href="">Renfe Spain Pass</a></div>
-                            <div class="main-menu__item"><a href="">Balkan Flexi Pass</a></div>
-                          </div>
-                        </div>
-                        <div class="main-menu__item"><a href="">Forum</a></div>
-                        <div class="main-menu__item"><a href="">Blog</a></div>
-            </div>
+          <div class="logo"><a href=""><img class="logo__image" src="./images/logo-dark.svg" alt=""/></a>
           </div>
         </div>
-        <div class="header__right">
-          <div class="language d-none d-xl-block">
-            <div class="language__selector" data-bs-toggle="dropdown"><img class="language__icon" src="images/lang-ru.jpg" alt="">
+        <div class="header__lang order-lg-2">
+          <div class="language">
+            <div class="language__selector dropdown-list dropdown-list_desktop">
+              <div class="language__icon">
+                          <svg class="lang-icon">
+                            <use xlink:href="images/lang_sprite.svg#Azerbaijan"></use>
+                          </svg>
+              </div>
               <svg class="language__arrow">
-                <use xlink:href="images/sprite.svg#arrow-dropdown"></use>
+                <use xlink:href="images/sprite.svg#down"></use>
               </svg>
             </div>
-            <div class="language__dropdown dropdown-menu dropdown-menu-end">
-              <div class="language__items"><a class="language__item" href="">čeština</a><a class="language__item" href="">Dansk</a><a class="language__item" href="">Deutsch</a><a class="language__item" href="">Eesti</a><a class="language__item" href="">Espanol</a><a class="language__item" href="">Français</a><a class="language__item" href="">Italiano</a><a class="language__item" href="">Latvisks</a><a class="language__item" href="">Lietuvių</a><a class="language__item" href="">Magyar</a><a class="language__item" href="">Nederlands</a><a class="language__item" href="">Norsk</a><a class="language__item" href="">Polski</a><a class="language__item" href="">Português</a><a class="language__item" href="">Română</a><a class="language__item" href="">Slovene</a><a class="language__item" href="">Polski</a><a class="language__item" href="">Português</a><a class="language__item" href="">Română</a><a class="language__item" href="">Slovene</a><a class="language__item" href="">Slovenský</a><a class="language__item" href="">Suomi</a><a class="language__item" href="">Svenska</a><a class="language__item" href="">Tiếng việt</a><a class="language__item" href="">Türkçe</a><a class="language__item" href="">ελληνικά</a><a class="language__item" href="">Български</a><a class="language__item" href="">Русский</a><a class="language__item" href="">Українська</a><a class="language__item" href="">العربية</a><a class="language__item" href="">فارسی</a><a class="language__item" href="">ภาษาไทย</a><a class="language__item" href="">中文</a><a class="language__item" href="">日本語</a><a class="language__item" href="">한국어</a>
+            <div class="language__dropdown menu-list">
+              <div class="language__mobile-top d-lg-none">
+                <div class="language__mobile-heading like-h4">Language</div>
+                <div class="language__mobile-close">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#close"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="language__items"><a class="language__item language__item_selected" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">Azerbaijan</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#Azerbaijan"></use>
+                              </svg>
+                  </div></a><a class="language__item" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">Bulgaria</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#Bulgaria"></use>
+                              </svg>
+                  </div></a><a class="language__item" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">China</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#China"></use>
+                              </svg>
+                  </div></a><a class="language__item" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">Czech Republic</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#Czech Republic"></use>
+                              </svg>
+                  </div></a><a class="language__item" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">Denmark</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#Denmark"></use>
+                              </svg>
+                  </div></a><a class="language__item" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">Estonia</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#Estonia"></use>
+                              </svg>
+                  </div></a><a class="language__item" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">Finland</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#Finland"></use>
+                              </svg>
+                  </div></a><a class="language__item" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">France</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#France"></use>
+                              </svg>
+                  </div></a><a class="language__item" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">Germany</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#Germany"></use>
+                              </svg>
+                  </div></a><a class="language__item" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">Greece</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#Greece"></use>
+                              </svg>
+                  </div></a><a class="language__item" href="#">
+                  <svg class="language__item-check">
+                    <use xlink:href="images/sprite.svg#check"></use>
+                  </svg>
+                  <div class="language__item-text">Turkey</div>
+                  <div class="language__item-icon">
+                              <svg class="lang-icon">
+                                <use xlink:href="images/lang_sprite.svg#Turkey"></use>
+                              </svg>
+                  </div></a>
               </div>
             </div>
           </div>
-          <div class="hamburger d-xl-none">
-            <div class="hamburger__switcher">
-              <div class="hamburger__icon"><span></span><span></span><span></span>
+        </div>
+        <div class="header__menu order-lg-1">
+          <div class="main-menu" id="main-menu">
+            <div class="main-menu__hamburger d-lg-none">
+              <div class="hamburger">
+                <div class="hamburger__switcher">
+                  <div class="hamburger__icon"><span></span><span></span><span></span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="mobile-menu-overlay"></div>
-          <div class="mobile-menu">
-            <div class="mobile-menu__top">
-              <div class="logo"><a href=""><img class="logo__image" src="./images/logo-mobile.svg" alt=""></a></div>
-            </div>
-            <div class="mobile-menu__content">
-              <div class="mobile-menu__items">
-                          <div class="mobile-menu__item mobile-menu__item_parent"><a href="">Train tickets
-                              <svg class="mobile-menu__arrow">
-                                <use xlink:href="images/sprite.svg#arrow-mobile-menu"></use>
+            <div class="main-menu__container">
+              <div class="main-menu__mobile-top d-lg-none"></div>
+              <div class="main-menu__items main-menu__items_with-icons">
+                          <div class="main-menu__item main-menu__item_parent"><a class="main-menu__link" href="#" data-bs-target="#menu-item-0">
+                              <svg class="main-menu__link-icon">
+                                <use xlink:href="images/sprite.svg#TrainSimple"></use>
+                              </svg><span class="main-menu__link-text">Train tickets</span>
+                              <svg class="main-menu__link-arrow">
+                                <use xlink:href="images/sprite.svg#down"></use>
                               </svg></a>
-                            <div class="mobile-menu__submenu">
-                              <div class="mobile-menu__submenu-top">
-                                <svg class="mobile-menu__submenu-back">
-                                  <use xlink:href="images/sprite.svg#arrow-mobile-menu-back"></use>
-                                </svg><a href="">Train tickets</a>
-                              </div>
-                              <div class="mobile-menu__item"><a href="">Search train route</a></div>
-                              <div class="mobile-menu__item"><a href="">Night train</a></div>
-                              <div class="mobile-menu__item"><a href="">Train company</a></div>
+                            <div class="main-menu__submenu collapse menu-list" id="menu-item-0" data-bs-parent="#main-menu">
+                              <div class="main-menu__item"><a class="main-menu__link" href="#"><span class="main-menu__link-text">1</span></a></div>
+                              <div class="main-menu__item"><a class="main-menu__link" href="#"><span class="main-menu__link-text">2</span></a></div>
+                              <div class="main-menu__item"><a class="main-menu__link" href="#"><span class="main-menu__link-text">3</span></a></div>
                             </div>
                           </div>
-                          <div class="mobile-menu__item mobile-menu__item_parent"><a href="">Interrail
-                              <svg class="mobile-menu__arrow">
-                                <use xlink:href="images/sprite.svg#arrow-mobile-menu"></use>
+                          <div class="main-menu__item main-menu__item_parent"><a class="main-menu__link" href="#" data-bs-target="#menu-item-1">
+                              <svg class="main-menu__link-icon">
+                                <use xlink:href="images/sprite.svg#Ticket"></use>
+                              </svg><span class="main-menu__link-text">Interrail</span>
+                              <svg class="main-menu__link-arrow">
+                                <use xlink:href="images/sprite.svg#down"></use>
                               </svg></a>
-                            <div class="mobile-menu__submenu">
-                              <div class="mobile-menu__submenu-top">
-                                <svg class="mobile-menu__submenu-back">
-                                  <use xlink:href="images/sprite.svg#arrow-mobile-menu-back"></use>
-                                </svg><a href="">Train tickets</a>
-                              </div>
-                              <div class="mobile-menu__item"><a href="">Interrail</a></div>
-                              <div class="mobile-menu__item"><a href="">Interrail Global Pass</a></div>
-                              <div class="mobile-menu__item"><a href="">Interrail One Country Pass</a></div>
-                              <div class="mobile-menu__item"><a href="">First time Interrail</a></div>
-                              <div class="mobile-menu__item"><a href="">How to Interrail</a></div>
-                              <div class="mobile-menu__item"><a href="">Interrail train reservations</a></div>
-                              <div class="mobile-menu__item"><a href="">Interrail night trains</a></div>
-                              <div class="mobile-menu__item"><a href="">Interrail ferries</a></div>
-                              <div class="mobile-menu__item"><a href="">Interrail buses</a></div>
-                              <div class="mobile-menu__item"><a href="">Search Interrail route</a></div>
-                              <div class="mobile-menu__item"><a href="">Interrail country overview</a></div>
-                              <div class="mobile-menu__item"><a href="">Interrail offers and discounts</a></div>
+                            <div class="main-menu__submenu collapse menu-list" id="menu-item-1" data-bs-parent="#main-menu">
+                              <div class="main-menu__item"><a class="main-menu__link" href="#"><span class="main-menu__link-text">1</span></a></div>
+                              <div class="main-menu__item"><a class="main-menu__link" href="#"><span class="main-menu__link-text">2</span></a></div>
+                              <div class="main-menu__item"><a class="main-menu__link" href="#"><span class="main-menu__link-text">3</span></a></div>
                             </div>
                           </div>
-                          <div class="mobile-menu__item mobile-menu__item_parent"><a href="">Rail passes
-                              <svg class="mobile-menu__arrow">
-                                <use xlink:href="images/sprite.svg#arrow-mobile-menu"></use>
+                          <div class="main-menu__item main-menu__item_parent"><a class="main-menu__link" href="#" data-bs-target="#menu-item-2">
+                              <svg class="main-menu__link-icon">
+                                <use xlink:href="images/sprite.svg#globe"></use>
+                              </svg><span class="main-menu__link-text">Travel guide</span>
+                              <svg class="main-menu__link-arrow">
+                                <use xlink:href="images/sprite.svg#down"></use>
                               </svg></a>
-                            <div class="mobile-menu__submenu">
-                              <div class="mobile-menu__submenu-top">
-                                <svg class="mobile-menu__submenu-back">
-                                  <use xlink:href="images/sprite.svg#arrow-mobile-menu-back"></use>
-                                </svg><a href="">Train tickets</a>
-                              </div>
-                              <div class="mobile-menu__item"><a href="">Britrail Pass</a></div>
-                              <div class="mobile-menu__item"><a href="">German Rail Pass</a></div>
-                              <div class="mobile-menu__item"><a href="">Swiss Travel Pass</a></div>
-                              <div class="mobile-menu__item"><a href="">Renfe Spain Pass</a></div>
-                              <div class="mobile-menu__item"><a href="">Balkan Flexi Pass</a></div>
+                            <div class="main-menu__submenu collapse menu-list" id="menu-item-2" data-bs-parent="#main-menu">
+                              <div class="main-menu__item"><a class="main-menu__link" href="#"><span class="main-menu__link-text">1</span></a></div>
+                              <div class="main-menu__item"><a class="main-menu__link" href="#"><span class="main-menu__link-text">2</span></a></div>
+                              <div class="main-menu__item"><a class="main-menu__link" href="#"><span class="main-menu__link-text">3</span></a></div>
                             </div>
                           </div>
-                          <div class="mobile-menu__item"><a href="">Forum</a></div>
-                          <div class="mobile-menu__item"><a href="">Blog</a></div>
-                          <div class="mobile-menu__item mobile-menu__item_parent"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">čeština</span>
-                              <svg class="mobile-menu__arrow">
-                                <use xlink:href="images/sprite.svg#arrow-mobile-menu"></use>
-                              </svg></a>
-                            <div class="mobile-menu__submenu">
-                              <div class="mobile-menu__submenu-top">
-                                <svg class="mobile-menu__submenu-back">
-                                  <use xlink:href="images/sprite.svg#arrow-mobile-menu-back"></use>
-                                </svg><span>Language</span>
-                              </div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">čeština</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Dansk</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Deutsch</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Eesti</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Espanol</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Français</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Italiano</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Latvisks</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Lietuvių</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Magyar</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Nederlands</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Norsk</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Polski</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Português</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Română</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Slovene</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Polski</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Português</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Română</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Slovene</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Slovenský</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Suomi</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Svenska</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Tiếng việt</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Türkçe</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">ελληνικά</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Български</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Русский</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">Українська</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">العربية</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">فارسی</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">ภาษาไทย</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">中文</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">日本語</span></a></div>
-                              <div class="mobile-menu__item"><a href=""><span class="mobile-menu__language-label"><img src="images/lang-ru.jpg" alt="">한국어</span></a></div>
-                            </div>
-                          </div>
-                <div class="mobile-menu__socials">
+                          <div class="main-menu__item"><a class="main-menu__link" href="#">
+                              <svg class="main-menu__link-icon">
+                                <use xlink:href="images/sprite.svg#ChatsCircle"></use>
+                              </svg><span class="main-menu__link-text">Forum</span></a></div>
+                          <div class="main-menu__item"><a class="main-menu__link" href="#">
+                              <svg class="main-menu__link-icon">
+                                <use xlink:href="images/sprite.svg#Pencil_Edit"></use>
+                              </svg><span class="main-menu__link-text">Blog</span></a></div>
+                          <div class="main-menu__item"><a class="main-menu__link" href="#">
+                              <svg class="main-menu__link-icon">
+                                <use xlink:href="images/sprite.svg#Question"></use>
+                              </svg><span class="main-menu__link-text">How it works</span></a></div>
+                <div class="main-menu__mobile-socials d-lg-none">
                   <div class="socials">
                     <div class="socials__label">Follow us</div>
-                    <div class="socials__items"><a class="socials__item" href="">
+                    <div class="socials__items"><a class="socials__item socials__item_facebook" href="#">
                         <svg class="socials__icon">
-                          <use xlink:href="images/sprite.svg#soc-instagram"></use>
-                        </svg></a><a class="socials__item" href="">
+                          <use xlink:href="images/sprite.svg#social_facebook"></use>
+                        </svg></a><a class="socials__item socials__item_instagram" href="#">
                         <svg class="socials__icon">
-                          <use xlink:href="images/sprite.svg#soc-facebook"></use>
-                        </svg></a><a class="socials__item" href="">
+                          <use xlink:href="images/sprite.svg#social_instagram"></use>
+                        </svg></a><a class="socials__item socials__item_youtube" href="#">
                         <svg class="socials__icon">
-                          <use xlink:href="images/sprite.svg#soc-youtube"></use>
+                          <use xlink:href="images/sprite.svg#social_youtube"></use>
                         </svg></a></div>
                   </div>
                 </div>
@@ -225,533 +231,134 @@
         </div>
       </div>
     </header>
-    <main class="page">
-      <section class="hero">
-        <picture class="hero__background" style="background-color: #052800">
-          <source srcset="images/hero1_md.jpg, images/hero1_md@2x.jpg 2x" media="(max-width:768px)">
-          <source srcset="images/hero1@2x.jpg 2x"><img class="hero__background-image" src="images/hero1.jpg" alt="">
-        </picture>
-        <div class="hero__container container-xl">
-          <div class="row">
-            <div class="hero__main col-sm-6">
-              <h1 class="hero__title">Paris to London by train</h1>
-              <div class="hero__text">
-                <p>Travel from Paris (France) to London (United Kingdom) by train (343km): schedule and information to the train connection. Compare fares and buy your ticket.</p>
-              </div><a class="hero__button button button_orange" href="">Ticket information
-                <svg class="button__icon">
-                  <use xlink:href="images/sprite.svg#arrow-down"></use>
-                </svg></a>
-            </div>
-            <div class="col-sm-5 col-xl-4 offset-sm-1 offset-xl-2">
-              <div class="search-route" id="search-route-form">
-                <div class="search-route__inner">
-                  <div class="search-route__title like-h3">Search a route</div>
-                  <div class="search-route-form">
-                    <div class="search-route-form__input-group">
-                      <div class="input-item">
-                        <input class="input" id="search-route-from" type="text" placeholder="From" ref="from" v-model="from">
-                      </div>
-                      <div class="input-item">
-                        <input class="input" id="search-route-to" type="text" placeholder="To" ref="to" v-model="to">
-                      </div><a class="search-route-form__swap" href="javascript:" @click="swap">
-                        <svg class="search-route-form__swap-icon" viewBox="0 0 21 25">
-                          <path fill-rule="evenodd" d="M15.414 0l5.414 5.414-5.414 5.414L14 9.414l3-3H5.414a3 3 0 0 0-3 3v2h-2v-2a5 5 0 0 1 5-5H17l-3-3L15.414 0zm3 13.414v2a3 3 0 0 1-3 3H3.828l3-3L5.414 14 0 19.414l5.414 5.414 1.414-1.414-3-3h11.586a5 5 0 0 0 5-5v-2h-2z"></path>
-                        </svg></a>
-                    </div>
-                    <button class="search-route-form__button button button_green" @click="submit">Search</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="advantages d-none d-lg-block">
-        <div class="advantages__items container-xl">
-          <div class="advantages__item">
-            <svg class="advantages__icon" viewBox="0 0 48 48">
-              <path fill-rule="evenodd" d="M36.082 4.143c-.204.044-1.985.713-3.957 1.487-4.123 1.618-3.993 1.534-3.993 2.58 0 1.267-.767 2.069-1.984 2.073-.607.002-1.032-.188-1.487-.665-.366-.384-.706-.579-1.013-.579-.121 0-3.067 1.121-6.546 2.492l-6.325 2.492-2.915.001-3.485.136c-1.614.38-2.831 1.582-3.256 3.212-.202.774-.202 18.337 0 19.111.425 1.63 1.642 2.832 3.256 3.212.494.117 2.213.135 12.861.136l12.291.001.294-.2c.162-.11.324-.26.361-.334s.175-.367.307-.652c.418-.904 1.314-1.339 2.254-1.095.681.177 1.045.506 1.421 1.289.505 1.048.237.992 4.688.991 4.138-.001 4.429-.031 5.418-.557 1.041-.554 1.831-1.583 2.148-2.797.199-.763.199-18.336 0-19.098-.316-1.214-1.106-2.243-2.148-2.797-.989-.526-1.28-.556-5.418-.557-4.454-.001-4.183-.059-4.691.997-.381.792-.798 1.158-1.49 1.306-.912.196-1.781-.252-2.185-1.125-.351-.758-.349-.756-.613-.953-.24-.179-.366-.183-6.665-.227l-6.421-.045 3.243-1.28c3.149-1.242 3.25-1.275 3.468-1.136 1.446.924 2.717 1.14 4.037.685a4.17 4.17 0 0 0 2.674-3.048l.112-.549 3.064-1.198c3.355-1.312 3.583-1.366 4.357-1.022.724.321.953.685 1.811 2.877.877 2.239 1.101 2.579 1.705 2.579.653 0 1.109-.418 1.109-1.017 0-.359-1.341-3.943-1.718-4.59-.767-1.318-2.03-2.099-3.526-2.18-.371-.02-.842-.001-1.046.043zm-7.298 12.504c.824 1.304 2.611 2.109 4.111 1.852a5.5 5.5 0 0 0 1.16-.371c.636-.298 1.513-1.07 1.782-1.569l.168-.311h3.365c3.719 0 3.68-.005 4.323.575.725.655.683.023.683 10.104 0 9.856.03 9.331-.567 9.993-.617.685-.602.682-4.419.684l-3.384.002-.168-.311c-.269-.499-1.145-1.271-1.782-1.569a5.5 5.5 0 0 0-1.16-.371c-1.492-.256-3.291.555-4.111 1.852l-.252.398-11.881-.002c-13.375-.002-12.247.058-12.916-.684-.597-.662-.567-.137-.567-9.993 0-10.08-.043-9.449.682-10.104.676-.611-.27-.569 12.801-.572l11.881-.003.252.398zm3.205 3.446c-.355.092-.717.515-.794.929-.084.449.012 1.223.184 1.486.204.311.709.534 1.06.468.651-.122.945-.583.945-1.482 0-1.066-.551-1.619-1.394-1.401zm4.269 1.581c-.553.337-.571.447-.542 3.218l.026 2.496.332.305c.375.343.782.4 1.224.172.532-.275.535-.292.535-3.051 0-2.815-.025-2.954-.581-3.187-.409-.171-.655-.159-.994.048zm4.461-.093c-.102.044-.292.207-.423.362l-.237.282v4.711 4.711l.289.313c.356.385.795.481 1.238.271.628-.298.609-.125.609-5.341v-4.682l-.289-.316c-.309-.337-.816-.471-1.186-.312zm-25.618.815c-.378.332-.475.725-.288 1.172.1.24.438.547 1.387 1.263.69.52 1.254.964 1.254.987s-1.363.042-3.029.042h-3.029l-.391-.843c-.3-.645-.461-.885-.687-1.023-.336-.205-.728-.23-1.049-.067-.294.149-.626.656-.626.957s1.153 2.65 1.421 2.89c.19.17.358.18 3.816.223l3.617.045-1.288.979c-1.031.784-1.313 1.045-1.412 1.309-.161.426-.079.736.294 1.108.251.251.361.297.707.297.395 0 .498-.067 2.895-1.869l2.485-1.869h1.791c1.427 0 1.844-.027 2.052-.135.487-.252.672-.937.396-1.47-.249-.482-.473-.531-2.441-.531h-1.784l-2.495-1.869c-2.372-1.777-2.514-1.869-2.89-1.869-.314 0-.459.056-.707.274zm16.907 3.083c-.595.154-.9.765-.828 1.657.069.863.435 1.266 1.131 1.248s1.073-.532 1.073-1.456c0-.61-.174-1.076-.476-1.274-.235-.154-.662-.237-.9-.175zm-.025 5.427c-.289.057-.701.505-.767.834-.102.508-.056 1.099.113 1.471.372.819 1.525.816 1.914-.005.174-.367.185-1.284.02-1.679-.19-.455-.748-.726-1.28-.621z"></path>
-            </svg>
-            <div class="advantages__text">Prices from hundreds of train and coach companies</div>
-          </div>
-          <div class="advantages__item">
-            <svg class="advantages__icon" viewBox="0 0 48 48">
-              <path fill-rule="evenodd" d="M18.506 6.099a2.97 2.97 0 0 0-1.875 1.64c-.212.45-.221.529-.247 2.291l-.027 1.825-5.679.023-5.679.023-.475.221a2.89 2.89 0 0 0-1.447 1.403l-.276.556v13.317 13.317l.223.472a2.89 2.89 0 0 0 1.412 1.438l.56.274H24.4h19.406l.56-.274a2.89 2.89 0 0 0 1.412-1.438l.223-.472V27.399 14.082l-.276-.556a2.89 2.89 0 0 0-1.447-1.403l-.475-.221-5.679-.023-5.679-.023-.027-1.825c-.026-1.768-.034-1.84-.25-2.297a2.89 2.89 0 0 0-1.412-1.438l-.56-.274-5.666-.017c-4.518-.013-5.738.006-6.022.095zm11.256 2.532c.111.11.133.385.133 1.68v1.548H24.4h-5.495v-1.548c0-1.295.022-1.57.133-1.68.118-.117.721-.132 5.362-.132l5.362.132zM8.373 14.733c-.411 1.157-1.477 2.233-2.654 2.677l-.425.161v-1.464c0-1.219.022-1.486.133-1.596s.379-.132 1.603-.132h1.47l-.126.354zm29.485.276c.347 1.273 1.221 2.639 2.245 3.508.895.76 1.761 1.186 3.298 1.624.084.024.102 1.518.084 7.27l-.022 7.24-.562.153c-2.447.666-4.378 2.581-5.046 5.007l-.157.57H24.4 11.102l-.154-.559c-.662-2.4-2.53-4.293-4.911-4.976l-.701-.201v-7.246-7.247l.574-.156c2.402-.654 4.35-2.566 5.007-4.914l.171-.597c.027-.084 2.733-.101 13.322-.084l13.288.021.16.588zm5.515-.498c.111.11.133.377.133 1.596v1.464l-.425-.161c-1.176-.444-2.243-1.52-2.654-2.677l-.126-.354h1.47c1.223 0 1.492.022 1.603.132zm-19.654 2.63c-.565.363-4.028 3.872-4.1 4.154-.107.424.008.95.282 1.291.142.176 1.05 1.1 2.019 2.054 1.965 1.935 2.14 2.048 2.839 1.84.296-.088.672-.414 2.121-1.84.969-.954 1.877-1.878 2.019-2.054.274-.341.389-.867.281-1.292-.075-.296-3.759-4.005-4.206-4.234s-.812-.204-1.255.08zm1.591 3.73l.865.863-.888.879-.888.879-.888-.879-.888-.879.865-.863c.476-.474.885-.863.91-.863s.434.388.91.863zM14.213 26.26c-.712.177-1.245.479-1.781 1.011a3.68 3.68 0 0 0 .002 5.3c2.185 2.171 5.877.988 6.402-2.05.206-1.191-.18-2.366-1.068-3.253-.953-.952-2.275-1.327-3.554-1.009zm16.312.791c-1.351.493-2.558.963-2.682 1.044-.306.2-.511.621-.501 1.028.009.355 2.832 8.169 3.095 8.569a1.3 1.3 0 0 0 .997.546c.422 0 5.353-1.782 5.629-2.035.246-.225.441-.644.441-.947 0-.236-2.886-8.172-3.113-8.56-.187-.32-.65-.557-1.071-.548-.207.004-1.298.357-2.796.903zm-14.83 1.779c.375.19.674.674.674 1.091 0 .642-.625 1.26-1.274 1.26-.393 0-.915-.327-1.101-.689-.312-.608-.116-1.272.482-1.632.405-.244.781-.253 1.22-.03zm16.973.398l1.864 5.071.085.219-1.19.433c-.654.238-1.197.423-1.207.411-.071-.095-1.992-5.463-1.965-5.49.037-.037 2.178-.853 2.274-.866.03-.004.093.096.139.223zM6.39 37.71c.832.484 1.614 1.4 1.954 2.289l.162.423H7.032c-1.226 0-1.495-.022-1.606-.132s-.133-.377-.133-1.593v-1.46l.357.125c.196.069.529.225.74.348zm37.116.984c0 1.219-.022 1.486-.133 1.596s-.379.132-1.603.132h-1.47l.126-.354c.402-1.134 1.409-2.168 2.57-2.643l.488-.193c.012-.001.021.657.021 1.462z"></path>
-            </svg>
-            <div class="advantages__text">Join millions of people who use us every day</div>
-          </div>
-          <div class="advantages__item">
-            <svg class="advantages__icon" viewBox="0 0 48 48">
-              <path fill-rule="evenodd" d="M22.152 3.641c-2.244.206-4.658 1.089-6.642 2.43-1.164.787-2.807 2.428-3.588 3.583-1.18 1.746-1.963 3.68-2.284 5.64l-.173 1.057h-.642-.642l-.093-.348c-.237-.887-1.353-1.215-2.051-.602-.43.378-.47.608-.419 2.46s.211 2.976.646 4.554c1.919 6.946 7.986 12.151 15.09 12.945l.838.094v.649.649l-6.004 1.332c-3.885.862-6.073 1.382-6.199 1.474-.107.078-.269.241-.359.363-.154.207-.165.327-.165 1.964 0 1.919.006 1.943.549 2.349l.22.165h13.234 13.234l.22-.165c.544-.406.549-.431.549-2.341v-1.736l-.23-.301c-.127-.166-.342-.347-.479-.403s-2.897-.688-6.134-1.405l-5.885-1.304v-.661-.661h.249c.512 0 1.98-.256 3.022-.526 6.146-1.596 11.03-6.442 12.691-12.591.405-1.501.563-2.643.612-4.443.051-1.852.011-2.082-.419-2.46-.698-.613-1.814-.286-2.051.602l-.093.348h-.642-.642l-.173-1.057C36.293 9.15 31.207 4.356 24.968 3.67c-.73-.08-2.104-.094-2.816-.029zm3.456 2.695c4.066.797 7.444 3.75 8.751 7.651.116.345.191.646.168.669s-.627.145-1.341.27c-1.34.236-1.535.313-1.853.739-.138.184-.169.362-.191 1.092l-.027.872h-.232c-.217 0-.264-.065-.746-1.026-.549-1.095-.816-1.405-1.288-1.494-.442-.083-.639-.01-2.174.805-1.503.798-1.806 1.039-1.894 1.508-.027.147.064 1.169.202 2.273l.252 2.006-.24.303c-.483.61-1.819 1.659-2.026 1.59-.038-.013-.512-1.165-1.052-2.559-.562-1.45-1.061-2.619-1.165-2.73s-.375-.266-.61-.354c-.631-.236-1.236-.558-1.207-.641.014-.04.577-.828 1.252-1.751l1.227-1.678.768-.009 3.176-.06c2.265-.047 2.421-.06 2.628-.215.78-.583.738-1.483-.141-2.965-.593-1-2.213-2.371-3.503-2.966-.506-.233-1.45-.371-4.265-.625-.263-.024-.531-.071-.594-.105-.21-.112 1.596-.594 2.789-.745.573-.072 2.694.021 3.337.147zm-5.89 3.223c3.887.428 3.693.38 4.786 1.199l.596.448-.836.05c-.46.028-1.501.055-2.313.06-1.269.008-1.517.03-1.756.157-.366.194-4.28 5.491-4.356 5.895-.066.351.009.7.21.983.21.294 1.202.994 2.11 1.486l.71.386 1.122 2.905c1.051 2.723 1.141 2.921 1.429 3.152.271.218.364.246.798.241.884-.011 2.356-.727 3.581-1.744.68-.564 1.601-1.638 1.866-2.175l.204-.413-.209-1.701-.247-1.879c-.031-.143.023-.209.281-.34l.319-.163.395.788c.42.838.727 1.172 1.145 1.251.141.026.946.037 1.788.023 1.399-.023 1.549-.039 1.75-.19.49-.367.547-.523.575-1.587l.026-.982.404-.054c.222-.029.512-.075.645-.102l.241-.048-.049.95c-.153 2.95-1.283 5.496-3.364 7.577a11.47 11.47 0 0 1-6.007 3.203c-1.053.211-3.308.192-4.345-.037-2.368-.522-4.202-1.514-5.854-3.166-1.673-1.673-2.737-3.669-3.202-6.007-.176-.883-.196-3.135-.036-4.011.401-2.198 1.443-4.298 2.921-5.885.555-.596.641-.658.906-.655.161.002 1.854.175 3.763.385zM9.637 19.963c.713 4.354 3.558 8.207 7.526 10.194 1.854.928 3.659 1.396 5.746 1.488 7.005.31 13.257-4.766 14.389-11.682l.173-1.057h.618.618v.229c0 .326-.215 1.535-.406 2.285-.258 1.009-.534 1.761-1.035 2.816a15.1 15.1 0 0 1-7.189 7.193c-4.239 2.032-8.995 2.022-13.274-.029-4.496-2.154-7.595-6.306-8.456-11.327-.067-.39-.122-.812-.122-.938v-.229h.618.618l.173 1.057zm20.135 20.514c4.197.93 5.152 1.165 5.173 1.275.024.126-.735.135-11.476.135-10.579 0-11.5-.011-11.476-.13.02-.103 1.069-.363 5.133-1.27l5.107-1.14 1.197-.005 1.197-.005 5.147 1.14z"></path>
-            </svg>
-            <div class="advantages__text">Travel to thousands of destinations in 45 countries</div>
-          </div>
-        </div>
-      </section>
-      <section class="breadcrumbs container-xl">
-        <div class="breadcrumbs__list">
-          <div class="breadcrumbs__item"><a class="link" href="">Home</a></div>
-          <div class="breadcrumbs__item"><a class="link" href="">Train Tickets</a></div>
-          <div class="breadcrumbs__item"><span>Berlin To London By Train</span></div>
-        </div>
-      </section>
-      <section class="main-routes section container-xl">
-        <div class="row">
-          <div class="col-xl-8">
-            <h2 class="main-routes__title">There are two main routes</h2>
-            <div class="main-routes__undertitle">
-              <p>Compare them and decide which one feeds your needs best</p>
-            </div>
-            <div class="main-routes__list">
-              <div class="main-routes__card">
-                      <div class="route-path">
-                        <div class="route-path__head">1 route</div>
-                        <div class="route-path__route"><span>Berlin, Germany</span><span>Paris, France</span><span>London, United Kingdom</span><span>Paris, France</span><span>Berlin, Germany</span>
-                        </div>
-                      </div>
-              </div>
-              <div class="main-routes__card">
-                      <div class="route-path">
-                        <div class="route-path__head">2 route</div>
-                        <div class="route-path__route"><span>Berlin, Germany</span><span>Paris, France</span><span>London, United Kingdom</span><span>Paris, France</span><span>Berlin, Germany</span>
-                        </div>
-                      </div>
-              </div>
-            </div>
-            <div class="main-routes__text">
-              <p>To travel by train from Berlin in Germany to London in the United Kingdom you have two main routes. First you travel from Berlin by ICE/TGV/Thalys train to either Paris (France) or Brussels (Belgium). In Paris (France) or Brussels (Belgium) you change to the direct Eurostar train to London (United Kingdom). From London continue to your final destination.</p>
-            </div>
-          </div>
-          <div class="col-xl-4 d-none d-xl-block">
-            <div class="following-list">
-              <h3 class="following-list__title">The following links could be interesting for you</h3>
-              <div class="row">
-                            <div class="following-list-item col-sm-6 col-xl-12">
-                              <h4 class="following-list-item__title">Train types</h4>
-                              <div class="following-list-item__text">Train types you are likely to travel with.</div>
-                              <div class="following-list-item__link"><a class="link" href="">Eurostar (EST)</a></div>
-                            </div>
-                            <div class="following-list-item col-sm-6 col-xl-12">
-                              <h4 class="following-list-item__title">Ferry</h4>
-                              <div class="following-list-item__text">Ferry connections that might be helpful.</div>
-                              <div class="following-list-item__link"><a class="link" href="">Calais — Dover</a></div>
-                            </div>
-                            <div class="following-list-item col-sm-6 col-xl-12">
-                              <h4 class="following-list-item__title">Train connections</h4>
-                              <div class="following-list-item__text">popular connections travelled by other users.</div>
-                              <div class="following-list-item__link"><a class="link" href="">London — Paris</a></div>
-                            </div>
-                            <div class="following-list-item col-sm-6 col-xl-12">
-                              <h4 class="following-list-item__title">Train schedule</h4>
-                              <div class="following-list-item__text">Online timetable information, on which you can find relevant, up-to-date connections.</div>
-                              <div class="following-list-item__link"><a class="link" href="">rail.cc Deutsche Bahn</a></div>
-                            </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="popular-connections section container-xl">
-        <div class="slider">
-          <div class="slider__title">
-            <div class="popular-connections__title like-h2">Popular connections travelled by other users</div>
-            <div class="swiper-buttons">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-          </div>
-          <div class="slider__element swiper">
-            <div class="swiper-wrapper"><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide1.jpg" alt=""></div>
-                      <div class="card-slide__title">title1</div></a><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide2.jpg" alt=""></div>
-                      <div class="card-slide__title">title2</div></a><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide1.jpg" alt=""></div>
-                      <div class="card-slide__title">title1</div></a><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide2.jpg" alt=""></div>
-                      <div class="card-slide__title">title2</div></a><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide2.jpg" alt=""></div>
-                      <div class="card-slide__title">title2</div></a><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide2.jpg" alt=""></div>
-                      <div class="card-slide__title">title2</div></a>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <section class="route-detailed">
-        <div class="container-xl">
-          <div class="row">
-                  <div class="route-path col-xl-9">
-                    <div class="route-path__head">1 route</div>
-                    <div class="route-path__route"><span>Berlin, Germany</span><span>Paris, France</span><span>London, United Kingdom</span><span>Paris, France</span><span>Berlin, Germany</span>
-                    </div>
-                  </div>
-          </div>
-          <div class="route-detailed__stages">
-                  <div class="route-stage">
-                    <div class="route-stage__title-group">
-                      <div class="route-stage__num">1</div>
-                      <div class="route-stage__title like-h2">Travelling from<span> Berlin (Germany)</span> to<span> Paris (France)</span></div>
-                    </div>
-                    <div class="route-stage__content">
-                      <div class="route-stage__text js-showMore">
-                        <p>The fastest way to travel from Paris to London is by Eurostar high-speed-train. The journey time is only 2,5 hours from city center to city center. Ticket fares start from 57 EUR. There are 15 or more Eurostar connections every day.</p>
-                        <p>Find the exact train-schedule and saver-fares via our booking links. As earlier you book, as cheaper the ticket prices are.</p>
-                        <p>If you want to travel cheaper, you could use a bus. The journey time is much longer with nine hours. But the tickets are much cheaper and start from 14 EUR. Companies like Flixbus offer several connections per day, also over-night. The bus tickets are available via our booking links.</p>
-                      </div>
-                      <div class="route-stage__booking booking">
-                        <div class="like-h3">Where to buy a ticket from Berlin to Paris?</div>
-                        <div class="route-stage__booking-list row">
-                                <div class="booking-item col-md-6 col-xl-12">
-                                  <div class="booking-item__inner">
-                                    <div class="booking-item__content">
-                                      <div class="booking-item__top">
-                                        <div class="booking-item__title-group">
-                                          <div class="booking-item__title">Trainline</div>
-                                          <div class="booking-item__sub">Without extra service charges</div>
-                                        </div>
-                                        <div class="booking-item__logo"><img src="images/partner1.svg" alt=""></div>
-                                      </div>
-                                      <div class="booking-item__text">text</div>
-                                    </div>
-                                    <div class="booking-item__buttons"><a class="booking-item__button button button_orange" href="">Buy here</a><a class="booking-item__button button button_green" href="">Check times and prises</a></div>
-                                  </div>
-                                </div>
-                                <div class="booking-item col-md-6 col-xl-12">
-                                  <div class="booking-item__inner">
-                                    <div class="booking-item__content">
-                                      <div class="booking-item__top">
-                                        <div class="booking-item__title-group">
-                                          <div class="booking-item__title">Trainline</div>
-                                          <div class="booking-item__sub">Without extra service charges</div>
-                                        </div>
-                                        <div class="booking-item__logo"><img src="images/partner2.svg" alt=""></div>
-                                      </div>
-                                      <div class="booking-item__text">text</div>
-                                    </div>
-                                    <div class="booking-item__buttons"><a class="booking-item__button button button_orange" href="">Buy here</a><a class="booking-item__button button button_green" href="">Check times and prises</a></div>
-                                  </div>
-                                </div>
-                                <div class="booking-item col-md-6 col-xl-12">
-                                  <div class="booking-item__inner">
-                                    <div class="booking-item__content">
-                                      <div class="booking-item__top">
-                                        <div class="booking-item__title-group">
-                                          <div class="booking-item__title">Trainline</div>
-                                          <div class="booking-item__sub">Without extra service charges</div>
-                                        </div>
-                                        <div class="booking-item__logo"><img src="images/partner3.svg" alt=""></div>
-                                      </div>
-                                      <div class="booking-item__text">text</div>
-                                    </div>
-                                    <div class="booking-item__buttons"><a class="booking-item__button button button_orange" href="">Buy here</a><a class="booking-item__button button button_green" href="">Check times and prises</a></div>
-                                  </div>
-                                </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="route-stage">
-                    <div class="route-stage__title-group">
-                      <div class="route-stage__num">2</div>
-                      <div class="route-stage__title like-h2">Travelling from<span> Berlin (Germany)</span> to<span> Paris (France)</span></div>
-                    </div>
-                    <div class="route-stage__content">
-                      <div class="route-stage__text js-showMore">
-                        <p>The fastest way to travel from Paris to London is by Eurostar high-speed-train. The journey time is only 2,5 hours from city center to city center. Ticket fares start from 57 EUR. There are 15 or more Eurostar connections every day.</p>
-                        <p>Find the exact train-schedule and saver-fares via our booking links. As earlier you book, as cheaper the ticket prices are.</p>
-                        <p>If you want to travel cheaper, you could use a bus. The journey time is much longer with nine hours. But the tickets are much cheaper and start from 14 EUR. Companies like Flixbus offer several connections per day, also over-night. The bus tickets are available via our booking links.</p>
-                      </div>
-                      <div class="route-stage__booking booking">
-                        <div class="like-h3">Where to buy a ticket from Berlin to Paris?</div>
-                        <div class="route-stage__booking-list row">
-                                <div class="booking-item col-md-6 col-xl-12">
-                                  <div class="booking-item__inner">
-                                    <div class="booking-item__content">
-                                      <div class="booking-item__top">
-                                        <div class="booking-item__title-group">
-                                          <div class="booking-item__title">Trainline</div>
-                                          <div class="booking-item__sub">Without extra service charges</div>
-                                        </div>
-                                        <div class="booking-item__logo"><img src="images/partner1.svg" alt=""></div>
-                                      </div>
-                                      <div class="booking-item__text">text</div>
-                                    </div>
-                                    <div class="booking-item__buttons"><a class="booking-item__button button button_orange" href="">Buy here</a><a class="booking-item__button button button_green" href="">Check times and prises</a></div>
-                                  </div>
-                                </div>
-                                <div class="booking-item col-md-6 col-xl-12">
-                                  <div class="booking-item__inner">
-                                    <div class="booking-item__content">
-                                      <div class="booking-item__top">
-                                        <div class="booking-item__title-group">
-                                          <div class="booking-item__title">Trainline</div>
-                                          <div class="booking-item__sub">Without extra service charges</div>
-                                        </div>
-                                        <div class="booking-item__logo"><img src="images/partner2.svg" alt=""></div>
-                                      </div>
-                                      <div class="booking-item__text">text</div>
-                                    </div>
-                                    <div class="booking-item__buttons"><a class="booking-item__button button button_orange" href="">Buy here</a><a class="booking-item__button button button_green" href="">Check times and prises</a></div>
-                                  </div>
-                                </div>
-                                <div class="booking-item col-md-6 col-xl-12">
-                                  <div class="booking-item__inner">
-                                    <div class="booking-item__content">
-                                      <div class="booking-item__top">
-                                        <div class="booking-item__title-group">
-                                          <div class="booking-item__title">Trainline</div>
-                                          <div class="booking-item__sub">Without extra service charges</div>
-                                        </div>
-                                        <div class="booking-item__logo"><img src="images/partner3.svg" alt=""></div>
-                                      </div>
-                                      <div class="booking-item__text">text</div>
-                                    </div>
-                                    <div class="booking-item__buttons"><a class="booking-item__button button button_orange" href="">Buy here</a><a class="booking-item__button button button_green" href="">Check times and prises</a></div>
-                                  </div>
-                                </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-          </div>
-        </div>
-      </section>
-      <section class="following-list-mobile section container-xl d-xl-none">
-        <div class="following-list">
-          <h3 class="following-list__title">The following links could be interesting for you</h3>
-          <div class="row">
-                    <div class="following-list-item col-sm-6 col-xl-12">
-                      <h4 class="following-list-item__title">Train types</h4>
-                      <div class="following-list-item__text">Train types you are likely to travel with.</div>
-                      <div class="following-list-item__link"><a class="link" href="">Eurostar (EST)</a></div>
-                    </div>
-                    <div class="following-list-item col-sm-6 col-xl-12">
-                      <h4 class="following-list-item__title">Ferry</h4>
-                      <div class="following-list-item__text">Ferry connections that might be helpful.</div>
-                      <div class="following-list-item__link"><a class="link" href="">Calais — Dover</a></div>
-                    </div>
-                    <div class="following-list-item col-sm-6 col-xl-12">
-                      <h4 class="following-list-item__title">Train connections</h4>
-                      <div class="following-list-item__text">popular connections travelled by other users.</div>
-                      <div class="following-list-item__link"><a class="link" href="">London — Paris</a></div>
-                    </div>
-                    <div class="following-list-item col-sm-6 col-xl-12">
-                      <h4 class="following-list-item__title">Train schedule</h4>
-                      <div class="following-list-item__text">Online timetable information, on which you can find relevant, up-to-date connections.</div>
-                      <div class="following-list-item__link"><a class="link" href="">rail.cc Deutsche Bahn</a></div>
-                    </div>
-          </div>
-        </div>
-      </section>
-      <section class="blog-slider section container-xl">
-        <div class="slider">
-          <div class="slider__title">
-            <div class="blog-slider__title like-h2">Blog</div>
-            <div class="swiper-buttons">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-          </div>
-          <div class="slider__element swiper">
-            <div class="swiper-wrapper"><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide1.jpg" alt=""></div>
-                      <div class="card-slide__date">1st February 2016</div>
-                      <div class="card-slide__title">title1</div></a><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide2.jpg" alt=""></div>
-                      <div class="card-slide__date">1st February 2016</div>
-                      <div class="card-slide__title">title2</div></a><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide1.jpg" alt=""></div>
-                      <div class="card-slide__date">1st February 2016</div>
-                      <div class="card-slide__title">title1</div></a><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide2.jpg" alt=""></div>
-                      <div class="card-slide__date">1st February 2016</div>
-                      <div class="card-slide__title">title2</div></a><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide2.jpg" alt=""></div>
-                      <div class="card-slide__date">1st February 2016</div>
-                      <div class="card-slide__title">title2</div></a><a class="card-slide swiper-slide" href="">
-                      <div class="card-slide__image"><img src="images/slide2.jpg" alt=""></div>
-                      <div class="card-slide__date">1st February 2016</div>
-                      <div class="card-slide__title">title2</div></a>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-        <div class="blog-slider__buttons"><a class="blog-slider__button button button_orange" href="">Go to blog page</a></div>
-      </section>
-      <section class="partners-slider section container-xl">
-        <div class="slider">
-          <div class="slider__title">
-            <div class="partners-slider__title like-h2">Partners</div>
-            <div class="swiper-buttons">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-          </div>
-          <div class="slider__element swiper">
-            <div class="swiper-wrapper"><a class="partner-slide swiper-slide" href="">
-                      <div class="partner-slide__image"><img src="images/partner1.svg" alt=""></div></a><a class="partner-slide swiper-slide" href="">
-                      <div class="partner-slide__image"><img src="images/partner2.svg" alt=""></div></a><a class="partner-slide swiper-slide" href="">
-                      <div class="partner-slide__image"><img src="images/partner3.svg" alt=""></div></a><a class="partner-slide swiper-slide" href="">
-                      <div class="partner-slide__image"><img src="images/partner4.svg" alt=""></div></a><a class="partner-slide swiper-slide" href="">
-                      <div class="partner-slide__image"><img src="images/partner4.svg" alt=""></div></a><a class="partner-slide swiper-slide" href="">
-                      <div class="partner-slide__image"><img src="images/partner4.svg" alt=""></div></a><a class="partner-slide swiper-slide" href="">
-                      <div class="partner-slide__image"><img src="images/partner4.svg" alt=""></div></a><a class="partner-slide swiper-slide" href="">
-                      <div class="partner-slide__image"><img src="images/partner4.svg" alt=""></div></a>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
+    <main class="page-content">
+      <!--include sections/_hero-->
+      <!--include sections/_advantages-->
+      <!--include sections/_breadcrumbs-->
+      <!--include sections/_main-routes-->
+      <!--include sections/_popular-connections-->
+      <!--include sections/_route-detailed-->
+      <!--include sections/_following-list-mobile-->
+      <!--include sections/_blog-slider-->
+      <!--include sections/_partners-slider-->
     </main>
     <footer class="footer">
-      <div class="footer-top">
-        <div class="footer-top__container container-xl">
-          <div class="row">
-            <div class="col-xl-3">
-              <div class="footer-top__group">
-                    <div class="footer-menu">
-                      <div class="footer-menu__item"><a href="">Train tickets</a>
-                        <div class="footer-menu__submenu">
-                          <div class="footer-menu__item"><a href="">Search train route</a></div>
-                          <div class="footer-menu__item"><a href="">Night train</a></div>
-                          <div class="footer-menu__item"><a href="">Train company</a></div>
-                        </div>
-                      </div>
-                    </div>
+      <div class="footer__row">
+        <div class="container-xl">
+          <div class="footer__subscription">
+            <div class="socials">
+              <div class="socials__items"><a class="socials__item socials__item_facebook" href="#">
+                  <svg class="socials__icon">
+                    <use xlink:href="images/sprite.svg#social_facebook"></use>
+                  </svg></a><a class="socials__item socials__item_instagram" href="#">
+                  <svg class="socials__icon">
+                    <use xlink:href="images/sprite.svg#social_instagram"></use>
+                  </svg></a><a class="socials__item socials__item_youtube" href="#">
+                  <svg class="socials__icon">
+                    <use xlink:href="images/sprite.svg#social_youtube"></use>
+                  </svg></a></div>
+            </div>
+            <div class="footer__subscription-text">
+              <div class="like-h4">Подпишитесь, чтобы не пропустить ничего важного</div>
+              <p>Предлагаем проверенные рекомендации и лайфхаки для путешествий на поездах.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="container-xl">
+          <div class="footer__links-groups row">
+            <div class="footer-links-group col-lg-6">
+              <div class="footer-links-group__title like-h4">Interrail</div>
+              <div class="footer-links-group__links links-list">
+                <div class="links-list__item"><a href="#">Eurail</a></div>
+                <div class="links-list__item"><a href="#">Eurail Global Pass</a></div>
+                <div class="links-list__item"><a href="#">Eurail Select Pass</a></div>
+                <div class="links-list__item"><a href="#">Eurail ONE Country Pass</a></div>
+                <div class="links-list__item"><a href="#">How to Eurail</a></div>
+                <div class="links-list__item"><a href="#">First time Eurail</a></div>
+                <div class="links-list__item"><a href="#">Eurail train reservations</a></div>
+                <div class="links-list__item"><a href="#">Eurail night trains</a></div>
+                <div class="links-list__item"><a href="#">Eurail ferries</a></div>
+                <div class="links-list__item"><a href="#">Eurail buses</a></div>
+                <div class="links-list__item"><a href="#">Search Eurail route</a></div>
               </div>
-              <div class="footer-top__group">
-                    <div class="footer-menu">
-                      <div class="footer-menu__item"><a href="">Rail passes</a>
-                        <div class="footer-menu__submenu">
-                          <div class="footer-menu__item"><a href="">Britrail Pass</a></div>
-                          <div class="footer-menu__item"><a href="">German Rail Pass</a></div>
-                          <div class="footer-menu__item"><a href="">Swiss Travel Pass</a></div>
-                          <div class="footer-menu__item"><a href="">Renfe Spain Pass</a></div>
-                          <div class="footer-menu__item"><a href="">Balkan Flexi Pass</a></div>
-                        </div>
-                      </div>
-                    </div>
+              <div class="footer-links-group__buttons"><a class="footer-links-group__button button button_red button_thin" href="#">Buy Eurail</a></div>
+            </div>
+            <div class="footer-links-group col-lg-6">
+              <div class="footer-links-group__title like-h4">Interrail</div>
+              <div class="footer-links-group__links links-list">
+                <div class="links-list__item"><a href="#">Eurail</a></div>
+                <div class="links-list__item"><a href="#">Eurail Global Pass</a></div>
+                <div class="links-list__item"><a href="#">Eurail Select Pass</a></div>
+                <div class="links-list__item"><a href="#">Eurail ONE Country Pass</a></div>
+                <div class="links-list__item"><a href="#">How to Eurail</a></div>
+                <div class="links-list__item"><a href="#">First time Eurail</a></div>
+                <div class="links-list__item"><a href="#">Eurail train reservations</a></div>
+                <div class="links-list__item"><a href="#">Eurail night trains</a></div>
+                <div class="links-list__item"><a href="#">Eurail ferries</a></div>
+                <div class="links-list__item"><a href="#">Eurail buses</a></div>
+                <div class="links-list__item"><a href="#">Search Eurail route</a></div>
               </div>
-              <div class="footer-top__group">
-                    <div class="footer-menu">
-                      <div class="footer-menu__item"><a href="">Travel guide</a>
-                        <div class="footer-menu__submenu">
-                          <div class="footer-menu__item"><a href="">Travel tours</a></div>
-                          <div class="footer-menu__item"><a href="">Train types</a></div>
-                          <div class="footer-menu__item"><a href="">Train travel in ...</a></div>
-                          <div class="footer-menu__item"><a href="">Ferry connections</a></div>
-                          <div class="footer-menu__item"><a href="">Bus tickets</a></div>
-                          <div class="footer-menu__item"><a href="">Countries</a></div>
-                        </div>
-                      </div>
-                    </div>
+              <div class="footer-links-group__buttons"><a class="footer-links-group__button button button_red button_thin" href="#">Buy Eurail</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="container-xl">
+          <div class="footer__menus row">
+            <div class="col-md-3 col-6">
+              <div class="links-list">
+                <div class="links-list__item links-list__item_bold"><a href="#">About Rail.cc</a></div>
+                <div class="links-list__item links-list__item_bold"><a href="#">How it works</a></div>
+                <div class="links-list__item links-list__item_bold"><a href="#">Blog</a></div>
+                <div class="links-list__item links-list__item_bold"><a href="#">F.A.Q.</a></div>
+                <div class="links-list__item links-list__item_bold"><a href="#">Contact</a></div>
+                <div class="links-list__item links-list__item_bold"><a href="#">Imprint</a></div>
               </div>
             </div>
-            <div class="col-xl-3">
-              <div class="footer-top__group">
-                    <div class="footer-menu">
-                      <div class="footer-menu__item"><a href="">Eurail</a>
-                        <div class="footer-menu__submenu">
-                          <div class="footer-menu__item"><a href="">Eurail</a></div>
-                          <div class="footer-menu__item"><a href="">Eurail Global Pass</a></div>
-                          <div class="footer-menu__item"><a href="">Eurail Select Pass</a></div>
-                          <div class="footer-menu__item"><a href="">Eurail ONE Country Pass</a></div>
-                          <div class="footer-menu__item"><a href="">how to Eurail</a></div>
-                          <div class="footer-menu__item"><a href="">first time Eurail</a></div>
-                          <div class="footer-menu__item"><a href="">Eurail train reservations</a></div>
-                          <div class="footer-menu__item"><a href="">Eurail night trains</a></div>
-                          <div class="footer-menu__item"><a href="">Eurail ferries</a></div>
-                          <div class="footer-menu__item"><a href="">Eurail buses</a></div>
-                          <div class="footer-menu__item"><a href="">Search Eurail route</a></div>
-                          <div class="footer-menu__item"><a href="">Eurail in ...</a></div>
-                          <div class="footer-menu__item"><a href="">Eurail offers and discounts</a></div>
-                        </div>
-                      </div>
-                    </div>
-                <div class="footer-top__group-buttons"><a class="button button_green" href="">Buy Eurail</a></div>
+            <div class="col-md-3 col-6">
+              <div class="links-list">
+                <div class="links-list__item links-list__item_bold"><a href="#">Train tickets</a></div>
+                <div class="links-list__item"><a href="#">Search train route</a></div>
+                <div class="links-list__item"><a href="#">Night train</a></div>
+                <div class="links-list__item"><a href="#">Train company</a></div>
               </div>
             </div>
-            <div class="col-xl-3">
-              <div class="footer-top__group">
-                    <div class="footer-menu">
-                      <div class="footer-menu__item"><a href="">Interrail</a>
-                        <div class="footer-menu__submenu">
-                          <div class="footer-menu__item"><a href="">Interrail</a></div>
-                          <div class="footer-menu__item"><a href="">Interrail Global Pass</a></div>
-                          <div class="footer-menu__item"><a href="">Interrail One Country Pass</a></div>
-                          <div class="footer-menu__item"><a href="">First time Interrail</a></div>
-                          <div class="footer-menu__item"><a href="">How to Interrail</a></div>
-                          <div class="footer-menu__item"><a href="">Interrail train reservations</a></div>
-                          <div class="footer-menu__item"><a href="">Interrail night trains</a></div>
-                          <div class="footer-menu__item"><a href="">Interrail ferries</a></div>
-                          <div class="footer-menu__item"><a href="">Interrail buses</a></div>
-                          <div class="footer-menu__item"><a href="">Search Interrail route</a></div>
-                          <div class="footer-menu__item"><a href="">Interrail country overview</a></div>
-                          <div class="footer-menu__item"><a href="">Interrail offers and discounts</a></div>
-                        </div>
-                      </div>
-                    </div>
-                <div class="footer-top__group-buttons"><a class="button button_green" href="">Buy Interrail</a></div>
+            <div class="col-md-3 col-6">
+              <div class="links-list">
+                <div class="links-list__item links-list__item_bold"><a href="#">Train tickets</a></div>
+                <div class="links-list__item"><a href="#">Search train route</a></div>
+                <div class="links-list__item"><a href="#">Night train</a></div>
+                <div class="links-list__item"><a href="#">Train company</a></div>
               </div>
             </div>
-            <div class="col-xl-3">
-              <div class="footer-top__group footer-top__group_last">
-                    <div class="footer-menu">
-                      <div class="footer-menu__item"><a href="">F.A.Q.</a>
-                      </div>
-                      <div class="footer-menu__item"><a href="">Blog</a>
-                      </div>
-                      <div class="footer-menu__item"><a href="">Forum</a>
-                      </div>
-                      <div class="footer-menu__item"><a href="">About Rail.cc</a>
-                      </div>
-                      <div class="footer-menu__item"><a href="">Imprint</a>
-                      </div>
-                      <div class="footer-menu__item"><a href="">Contact</a>
-                      </div>
-                      <div class="footer-menu__item"><a href="">Cookies</a>
-                      </div>
-                    </div>
-                <div class="socials">
-                  <div class="socials__label">Follow us</div>
-                  <div class="socials__items"><a class="socials__item" href="">
-                      <svg class="socials__icon">
-                        <use xlink:href="images/sprite.svg#soc-instagram"></use>
-                      </svg></a><a class="socials__item" href="">
-                      <svg class="socials__icon">
-                        <use xlink:href="images/sprite.svg#soc-facebook"></use>
-                      </svg></a><a class="socials__item" href="">
-                      <svg class="socials__icon">
-                        <use xlink:href="images/sprite.svg#soc-youtube"></use>
-                      </svg></a></div>
-                </div>
+            <div class="col-md-3 col-6">
+              <div class="links-list">
+                <div class="links-list__item links-list__item_bold"><a href="#">Train tickets</a></div>
+                <div class="links-list__item"><a href="#">Search train route</a></div>
+                <div class="links-list__item"><a href="#">Night train</a></div>
+                <div class="links-list__item"><a href="#">Train company</a></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom__container container-xl">
-          <div class="footer__logo d-none d-xl-block">
-            <div class="logo"><a href=""><img class="logo__image" src="./images/logo-black.svg" alt=""/></a></div>
-          </div>
-          <div class="footer-bottom__copyright">©1996-2022 rail.cc | railcc ® is a registered trademark</div>
-          <div class="scroll-top js-scrollToTop">
-            <svg class="scroll-top__icon">
-              <use xlink:href="images/sprite.svg#arrow-scroll-top"></use>
-            </svg>
+      <div class="footer__bottom">
+        <div class="container-xl">
+          <div class="footer-copyright">
+            <div class="footer-copyright__logo">
+              <div class="logo"><a href=""><img class="logo__image" src="./images/logo-light.svg" alt=""/></a>
+              </div>
+            </div>
+            <div class="footer-copyright__link"><a class="link" href="#">Cookies</a></div>
+            <div class="footer-copyright__text">©1996-2022 rail.cc | railcc ® is a registered trademark</div>
           </div>
         </div>
       </div>
     </footer>
-    <script src="js/jquery3.min.js" defer></script>
-    <script src="js/bootstrap.bundle.min.js" defer></script>
-    <script src="js/swiper-bundle.min.js" defer></script>
-    <script src="js/autoComplete.min.js" defer></script>
-    <script src="js/vue3.prod.js" defer></script>
-    <script src="js/common.min.js" defer></script>
-    <script src="js/index.min.js" defer></script>
+    <script src="js/vendor.min.js" defer></script>
+    <script src="js/app.min.js" defer></script>
   </body>
 </html>

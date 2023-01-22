@@ -1,0 +1,5 @@
+name: rail.cc
+type: php
+docroot: ""
+mutagen_enabled: true
+nodejs_version: "16"

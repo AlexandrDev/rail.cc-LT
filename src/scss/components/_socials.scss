@@ -1,37 +1,46 @@
 .socials {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
     &__label {
-        color: var(--grey);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--black);
     }
 
-    &__items{
+    &__items {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        column-gap: 8px;
-        margin-top: 16px;
+        column-gap: 16px;
     }
 
     &__item {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 48px;
-        height: 48px;
-        background: var(--green);
-        border-radius: 2px;
+        width: 52px;
+        height: 52px;
+        color: var(--white);
+        border-radius: 50%;
 
-        &:hover {
-            background: #50A444;
+        &_facebook {
+            background-color: #1877F2;
         }
 
-        &:active {
-            background: #449A39;
+        &_instagram {
+            background-color: #EC3183;
+        }
+
+        &_youtube {
+            background-color: #FF0302;
         }
     }
 
     &__icon {
         width: 24px;
         height: 24px;
-        fill: #fff;
     }
 }

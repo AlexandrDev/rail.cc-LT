@@ -1,31 +1,34 @@
 let gulp = require('gulp'),
-    webpack = require('webpack'),
-    webpackStream = require('webpack-stream'),
-    terserPlugin = require("terser-webpack-plugin"),
-    babel = require('gulp-babel'),
-    uglify = require('gulp-uglify'),
     pug = require('gulp-pug'),
     sass = require('gulp-sass')(require('sass')),
-    gcmq = require('gulp-group-css-media-queries'),
+    groupCssMediaQueries = require('gulp-group-css-media-queries'),
     autoprefixer = require('gulp-autoprefixer'),
     csso = require('gulp-csso'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    svgSprite = require('gulp-svg-sprite'),
+    webpack = require('webpack'),
+    webpackStream = require('webpack-stream');
+
+const webpackConfig = require('./webpack.config.js');
 
 let path = {
     dist: {
         html: '../',
         styles: '../css',
-        js: '../js'
+        js: '../js',
+        svg: '../images'
     },
     src: {
         html: 'pug/*.pug',
         styles: 'scss/**/*.scss',
-        js: 'js/**/*.js'
+        js: 'js/app.js',
+        svg: 'svg/**/*.svg'
     },
     watch: {
         html: 'pug/**/*.pug',
         styles: 'scss/**/*.scss',
-        js: 'js/**/*.js'
+        js: 'js/**/*.js',
+        svg: 'svg/**/*.svg'
     }
 };
 
@@ -41,8 +44,7 @@ function styles() {
     return gulp.src(path.src.styles)
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
-        .pipe(gcmq())
-        .pipe(gulp.dest(path.dist.styles))
+        .pipe(groupCssMediaQueries())
         .pipe(csso())
         .pipe(rename({
             suffix: '.min'
@@ -51,33 +53,33 @@ function styles() {
 }
 
 function scripts() {
-    /*return gulp.src(path.src.js)
-        .pipe(webpackStream({
-            mode: "production",
-            output: {
-                filename: 'app.js'
-            },
-            /!*optimization: {
-                minimize: true,
-                minimizer: [new terserPlugin()],
-            }*!/
-        }, webpack))
-        .pipe(gulp.dest(path.dist.js))*/
     return gulp.src(path.src.js)
-        .pipe(gulp.dest(path.dist.js))
-        .pipe(babel())
-        .pipe(uglify())
+        .pipe(webpackStream(webpackConfig), webpack)
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(gulp.dest(path.dist.js))
 }
 
+function svg() {
+    return gulp.src(path.src.svg)
+      .pipe(svgSprite({
+          mode: {
+              symbol: {
+                  dest: '',
+                  sprite: 'sprite.svg'
+              }
+          }
+      }))
+      .pipe(gulp.dest(path.dist.svg))
+}
+
 function watch() {
     gulp.watch(path.watch.html, html)
     gulp.watch(path.watch.styles, styles)
     gulp.watch(path.watch.js, scripts)
+    gulp.watch(path.watch.svg, svg)
 }
 
-exports.all = gulp.parallel(html, styles, scripts, watch);
-exports.js_css = gulp.parallel(styles, scripts, watch);
+exports.build = gulp.parallel(html, styles, scripts, svg);
+exports.watch = gulp.parallel(html, styles, scripts, svg, watch);

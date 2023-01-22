@@ -1,4 +1,7 @@
-mixin logo(name)
+mixin logo(name, link="true")
   .logo
-    a(href="")
+    if link
+      a(href="")
+        img(src="./images/"+name+".svg", alt="").logo__image
+    else
       img(src="./images/"+name+".svg", alt="").logo__image

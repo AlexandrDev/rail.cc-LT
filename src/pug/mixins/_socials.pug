@@ -1,0 +1,11 @@
+mixin socials(has_label)
+  .socials&attributes(attributes)
+    if has_label
+      .socials__label Follow us
+    .socials__items
+      a(href='#').socials__item.socials__item_facebook
+        +svg('social_facebook').socials__icon
+      a(href='#').socials__item.socials__item_instagram
+        +svg('social_instagram').socials__icon
+      a(href='#').socials__item.socials__item_youtube
+        +svg('social_youtube').socials__icon

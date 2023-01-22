@@ -1,0 +1,17 @@
+.menu-list {
+    a {
+        display: flex;
+        color: inherit;
+        padding: 12px 16px;
+        background-color: var(--white);
+        border-bottom: 1px solid var(--beige);
+
+        &:hover {
+            background-color: #F7F5F3;
+        }
+
+        &:active {
+            background-color: var(--beige);
+        }
+    }
+}

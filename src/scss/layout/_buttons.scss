@@ -1,0 +1,50 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 0 32px;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all $transition_buttons;
+
+    &:disabled,
+    &.disabled {
+        background-color: #E3D5CC;
+        pointer-events: none;
+    }
+
+    &_thin {
+        height: 44px;
+    }
+
+    &_red {
+        background: var(--red-primary);
+
+        &:hover {
+            background: #F78D74;
+        }
+
+        &:active {
+            background: #E13A14;
+        }
+    }
+
+    &_green {
+        background: var(--green-secondary);
+
+        &:hover {
+            background: #C0D867;
+        }
+
+        &:active {
+            background: #77A701;
+        }
+    }
+}

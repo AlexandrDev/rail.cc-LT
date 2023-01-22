@@ -1,0 +1,26 @@
+mixin svgLang(svg_id)
+  svg.lang-icon
+    use(xlink:href='images/lang_sprite.svg#' + svg_id)
+
+.language
+  .language__selector.dropdown-list.dropdown-list_desktop
+    .language__icon
+      +svgLang('Azerbaijan')
+    +svg('down').language__arrow
+  .language__dropdown.menu-list
+    .language__mobile-top.d-lg-none
+      .language__mobile-heading.like-h4 Language
+      .language__mobile-close
+        +svg('close')
+    .language__items
+      a(href='#').language__item.language__item_selected
+        +svg('check').language__item-check
+        .language__item-text Azerbaijan
+        .language__item-icon
+          +svgLang('Azerbaijan')
+      for item in ['Bulgaria','China','Czech Republic','Denmark','Estonia','Finland','France','Germany','Greece','Turkey']
+        a(href='#').language__item
+          +svg('check').language__item-check
+          .language__item-text= item
+          .language__item-icon
+            +svgLang(item)

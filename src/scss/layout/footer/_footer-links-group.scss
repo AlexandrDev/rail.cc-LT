@@ -1,0 +1,48 @@
+.footer-links-group {
+  &:not(:first-child) {
+    @include lg-max {
+      padding-top: 40px;
+    }
+  }
+
+  &:not(:last-child) {
+    @include lg-max {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #444444;
+    }
+  }
+
+  &__links {
+    margin-top: 16px;
+
+    @include lg-max {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include md {
+      column-count: 2;
+      column-gap: 24px;
+    }
+
+    @include lg {
+      margin-top: 24px;
+    }
+  }
+
+  &__buttons {
+    margin-top: 24px;
+
+    @include lg {
+      margin-top: 32px;
+    }
+  }
+
+  &__button {
+    min-width: 180px;
+
+    @include lg-max {
+      width: 100%;
+    }
+  }
+}

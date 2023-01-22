@@ -1,75 +1,42 @@
 :root {
-    --dark: #0D0D0D;
-    --grey: #595A5F;
-    --grey-light: #D9DFE4;
-    --link: #2F79DB;
-    --light-blue: #F2F6FA;
-    --green: #62B455;
-    --orange: #F2994A;
+    --white: #FFFFFF;
+    --beige: #F2EEEB;
+    --grey: #444444;
+    --red-primary: #F24C26;
+    --green-secondary: #96BF02;
+    --black: #000000;
 }
+
 
 /*
  * Bootstrap 5: override
  */
-.row {
-    --bs-gutter-x: 16px;
-
-    @include tablet-min {
-        --bs-gutter-x: 20px;
-    }
-
-    @include desktop-min {
-        --bs-gutter-x: 30px;
-    }
-}
-
-.container,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl {
-    --bs-gutter-x: 20px;
-
-    @include tablet-min {
+.container {
+    &,
+    &-lg,
+    &-md,
+    &-sm,
+    &-xl {
         --bs-gutter-x: 40px;
     }
-
-    @include desktop-min {
-        --bs-gutter-x: 15px;
-    }
-
-    @include desktop-min {
-        max-width: 1170px;
-    }
 }
 
+.row {
+    --bs-gutter-x: 24px;
+}
+
+
+/*
+ * Common
+ */
 *, ::after, ::before {
     box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden;
-}
-
 body {
     position: relative;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--dark);
-    line-height: 150%;
 }
 
 img {
     max-width: 100%;
-}
-
-.section {
-    margin-top: 48px;
-    margin-bottom: 48px;
-
-    @include desktop-min {
-        margin-top: 114px;
-        margin-bottom: 114px;
-    }
 }

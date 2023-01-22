@@ -1,0 +1,14 @@
+.links-list {
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &_bold {
+      font-weight: 600;
+    }
+  }
+}

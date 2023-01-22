@@ -1,37 +1,32 @@
-$imagesPath: '../images/';
+@import '../node_modules/normalize.css/normalize';
+@import '../node_modules/bootstrap/scss/bootstrap-grid';
 
+@import "vars";
 @import "mixins";
 @import "gui";
 
-@import "components/typography";
-@import "components/input";
-@import "components/button";
-@import "components/dropdown";
+@import "libs/bootstrap-parts";
 
-@import "layout/header";
-@import "layout/footer";
+@import "layout/typography";
+//@import "layout/inputs";
+@import "layout/buttons";
 
-@import "components/logo";
-@import "components/hamburger";
-@import "components/language";
-@import "components/main-menu";
-@import "components/mobile-menu";
-@import "components/footer-menu";
-@import "components/scroll-top";
+@import "components/menu-list";
 @import "components/socials";
-@import "components/search-route";
-@import "components/route-path";
-@import "components/route-stage";
-@import "components/booking-item";
-@import "components/following-list";
-@import "components/slider";
-@import "components/swiper";
-@import "components/card-slide";
-@import "components/partner-slide";
+@import "components/links-list";
 
-@import "sections/hero";
-@import "sections/advantages";
-@import "sections/breadcrumbs";
-@import "sections/main-routes";
-@import "sections/blog-slider";
-@import "sections/route-detailed";
+@import "layout/header/header";
+@import "layout/header/logo";
+@import "layout/header/main-menu";
+@import "layout/header/hamburger";
+@import "layout/header/language";
+
+@import "layout/footer/footer";
+@import "layout/footer/footer-links-group";
+@import "layout/footer/footer-copyright";
+
+
+/*
+ * Index page
+ */
+//@import "components/search-route";
