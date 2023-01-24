@@ -1,11 +1,11 @@
 .collapse {
-    &:not(.show) {
-        display: none;
-    }
+  &:not(.show) {
+    display: none;
+  }
 }
 
 .collapsing {
-    height: 0;
-    overflow: hidden;
-    transition: height $transition_dropdowns;
+  height: 0;
+  overflow: hidden;
+  transition: height $transition_dropdowns;
 }

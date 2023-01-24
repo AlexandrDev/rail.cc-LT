@@ -1,10 +1,10 @@
 :root {
-    --white: #FFFFFF;
-    --beige: #F2EEEB;
-    --grey: #444444;
-    --red-primary: #F24C26;
-    --green-secondary: #96BF02;
-    --black: #000000;
+  --white: #FFFFFF;
+  --beige: #F2EEEB;
+  --grey: #444444;
+  --red-primary: #F24C26;
+  --green-secondary: #96BF02;
+  --black: #000000;
 }
 
 
@@ -12,17 +12,17 @@
  * Bootstrap 5: override
  */
 .container {
-    &,
-    &-lg,
-    &-md,
-    &-sm,
-    &-xl {
-        --bs-gutter-x: 40px;
-    }
+  &,
+  &-lg,
+  &-md,
+  &-sm,
+  &-xl {
+    --bs-gutter-x: 40px;
+  }
 }
 
 .row {
-    --bs-gutter-x: 24px;
+  --bs-gutter-x: 24px;
 }
 
 
@@ -30,13 +30,13 @@
  * Common
  */
 *, ::after, ::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    position: relative;
+  position: relative;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }

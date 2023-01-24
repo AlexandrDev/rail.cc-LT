@@ -1,31 +1,31 @@
 .header {
-    position: relative;
-    background: var(--white);
-    z-index: 10;
+  position: relative;
+  background: var(--white);
+  z-index: 10;
+
+  @include lg-max {
+    box-shadow: 0 8px 16px rgba(96, 82, 72, 0.08);
+  }
+
+  @include lg {
+    border-bottom: 1px solid var(--beige);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     @include lg-max {
-        box-shadow: 0 8px 16px rgba(96, 82, 72, 0.08);
+      column-gap: 24px;
+      height: 56px;
     }
+  }
 
-    @include lg {
-        border-bottom: 1px solid var(--beige);
+  &__logo {
+    @include lg-max {
+      flex: 1;
+      z-index: 2;
     }
-
-    &__container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        @include lg-max {
-            column-gap: 24px;
-            height: 56px;
-        }
-    }
-
-    &__logo {
-        @include lg-max {
-            flex: 1;
-            z-index: 2;
-        }
-    }
+  }
 }

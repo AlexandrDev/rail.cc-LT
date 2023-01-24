@@ -1,27 +1,27 @@
 .menu-list {
-    width: max-content;
+  width: max-content;
+  background-color: var(--white);
+  box-shadow: 0 8px 16px rgb(96 82 72 / 16%);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all $transition_dropdowns;
+
+  &__item,
+  a {
+    display: flex;
+    color: inherit;
+    padding: 12px 16px;
     background-color: var(--white);
-    box-shadow: 0 8px 16px rgb(96 82 72 / 16%);
-    border-radius: 4px;
-    overflow: hidden;
-    transition: all $transition_dropdowns;
+    border-bottom: 1px solid var(--beige);
+    transition: all $transition_links;
+    cursor: pointer;
 
-    &__item,
-    a {
-        display: flex;
-        color: inherit;
-        padding: 12px 16px;
-        background-color: var(--white);
-        border-bottom: 1px solid var(--beige);
-        transition: all $transition_links;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #F7F5F3;
-        }
-
-        &:active {
-            background-color: var(--beige);
-        }
+    &:hover {
+      background-color: #F7F5F3;
     }
+
+    &:active {
+      background-color: var(--beige);
+    }
+  }
 }
