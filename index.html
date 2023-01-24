@@ -3,7 +3,7 @@
   <head>
     <title>Главная</title>
     <meta charset="UTF-8">
-    <meta id="mvp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -233,7 +233,48 @@
       </div>
     </header>
     <main class="page-content">
-      <!--include sections/_hero-->
+      <section class="section-hero">
+        <div class="section-hero__bg"><img src="images/hero-bg-1.svg"/></div>
+        <div class="section-hero__container container-xl">
+          <div class="section-hero__content">
+            <div class="section-hero__heading like-h1">Find train routes around the world</div>
+            <div class="section-hero__text">We are train enthusiast providing honest content since 1996</div>
+          </div>
+        </div>
+      </section>
+      <section class="index-search-route container-xl">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="search-route" id="search-route">
+              <div class="search-route__inputs">
+                <div class="search-route__input input">
+                  <input class="input__item" id="search-route-from" type="text" placeholder="From?" ref="from" v-model="from">
+                  <div class="input__icon">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#map"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="search-route__swap" @click="swap">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ArrowsLeftRight"></use>
+                  </svg>
+                </div>
+                <div class="search-route__input input">
+                  <input class="input__item" id="search-route-to" type="text" placeholder="To?" ref="to" v-model="to">
+                  <div class="input__icon">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#map"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <button class="search-route__button button button_red" @click="submit">Search</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="index-popular-dests container-xl" style="padding-block: 64px;"></section>
       <!--include sections/_advantages-->
       <!--include sections/_breadcrumbs-->
       <!--include sections/_main-routes-->

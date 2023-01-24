@@ -81,7 +81,6 @@
     }
 
     &__dropdown {
-        background-color: var(--white);
         opacity: 0;
         visibility: hidden;
 
@@ -94,23 +93,16 @@
             height: 100%;
             transform: translateX(100%);
             z-index: 3;
-            transition: all $transition_menu;
+            transition: all $transition_menus;
         }
 
         @include lg {
             position: absolute;
             top: 100%;
             right: 0;
-            display: block;
-            width: max-content;
             min-width: 240px;
             margin-top: 1px;
-            box-shadow: 0 8px 16px rgba(96, 82, 72, 0.16);
-            border-radius: 0 0 4px 4px;
-            overflow: hidden;
             pointer-events: none;
-            transition: all $transition_dropdowns;
-            z-index: 1;
         }
     }
 
@@ -150,6 +142,14 @@
     &__items {
         overflow-y: auto;
 
+        @include lg-max {
+            height: calc(100% - 56px);
+        }
+
+        @include lg {
+            max-height: 49*8.5px;
+        }
+
         &:after {
             @include lg {
                 content: '';
@@ -173,15 +173,6 @@
                     opacity: 1;
                 }
             }
-        }
-
-        @include lg-max {
-            height: calc(100vh - 56px);
-
-        }
-
-        @include lg {
-            max-height: 49*8.5px;
         }
     }
 

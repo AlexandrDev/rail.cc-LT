@@ -37,14 +37,12 @@ createApp({
         data,
         resultsList: {
           tag: "div",
-          class: "results-list",
+          class: "search-route__results menu-list",
           maxResults: 5,
         },
         resultItem: {
           tag: "div",
-          class: "results-list__item",
-          highlight: "results-list__item_highlight",
-          selected: "results-list__item_selected"
+          class: "menu-list__item"
         },
       })
 
@@ -63,4 +61,4 @@ createApp({
       }
     }
   }
-}).mount('#search-route-form')
+}).mount('#search-route')

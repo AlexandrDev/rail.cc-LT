@@ -1,145 +1,99 @@
 .search-route {
-    @include sm {
-        padding: 20px 20px 24px;
-        background: linear-gradient(300.32deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.04) 100.24%);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-content: center;
+    gap: 12px;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 16px rgba(96, 82, 72, 0.08);
+    border-radius: 8px;
+
+    @include md-max {
+        flex-direction: column;
     }
 
-    @include xl {
-        padding: 32px 32px 40px;
-    }
+    &__inputs {
+        position: relative;
+        display: flex;
+        flex-grow: 1;
+        gap: 12px;
 
-    &__title {
-        font-size: 18px;
-        line-height: 28px;
-        margin-bottom: 16px;
-
-        @include xl {
-            margin-bottom: 24px;
+        @include md-max {
+            flex-direction: column;
         }
     }
 
+    &__input {
+        position: relative;
+        flex-grow: 1;
 
-    &-form {
-        &__input-group {
-            position: relative;
-
-            .input-item {
-                position: relative;
-
-                &:nth-child(1) {
-                    .input {
-                        border-bottom-right-radius: 0;
-                        border-bottom-left-radius: 0;
-                    }
-                }
-
-                &:nth-child(2) {
-                    margin-top: -1px;
-
-                    .input {
-                        border-top-right-radius: 0;
-                        border-top-left-radius: 0;
-                    }
-                }
-            }
-
-            .input {
-                &:focus {
-                    position: relative;
-                    z-index: 1;
-                }
-            }
+        @include md-max {
+            background-color: var(--beige);
+            border-radius: 4px;
         }
 
-        &__swap {
-            $swapBtn: &;
+        &:first-child {
+            @include md-max {
+                padding-right: 52px;
+                z-index: 2;
+            }
+        }
+    }
 
+    &__swap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        flex-shrink: 0;
+        background: var(--beige);
+        border: 1px solid var(--beige);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all $transition_buttons;
+
+        &:hover {
+            background-color: var(--white);
+        }
+
+        &:active {
+            background-color: #CFC1B8;
+            border-color: #CFC1B8;
+        }
+
+        @include md-max {
             position: absolute;
             top: 0;
-            bottom: 0;
-            right: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            margin: auto;
-            border-radius: 50%;
-            border: 1px solid var(--grey-light);
-            outline: 0;
-            background: #fff;
-            z-index: 2;
-
-            &:hover {
-                background: var(--green);
-                border-color: var(--green);
-
-                #{$swapBtn}-icon {
-                    fill: #fff;
-                }
-            }
-
-            &:focus-visible {
-                border: 1px solid var(--link);
-            }
-
-            &:active {
-                background: #449A39;
-                border-color: #449A39;
-
-                #{$swapBtn}-icon {
-                    fill: #fff;
-                }
-            }
-
-            &-icon {
-                width: 24px;
-                height: 24px;
-                fill: var(--green);
-                transition: all .2s ease;
-            }
-        }
-
-        &__button {
-            width: 100%;
-            margin-top: 16px;
-
-            @include sm {
-                height: 48px;
-            }
-        }
-
-        .results-list {
-            position: absolute;
-            top: 100%;
             right: 0;
-            width: 100%;
-            background: #fff;
-            box-shadow: 0 4px 60px rgba(26, 41, 20, 0.4);
-            border-radius: 2px;
-            z-index: 10;
-
-            &__item {
-                display: block;
-                padding: 12px 20px;
-                color: var(--dark);
-                border-bottom: 1px solid var(--grey-light);
-                cursor: pointer;
-                transition: all .2s ease;
-
-                &:hover,
-                &_selected {
-                    background-color: var(--light-blue);
-                }
-
-                &_highlight {
-                    color: var(--green);
-                    background: none;
-                }
-            }
+            z-index: 2;
         }
+
+        &.disabled,
+        &[disabled] {
+            color: #CFC1B8;
+            pointer-events: none;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        flex-shrink: 0;
+
+        @include md {
+            width: 200px;
+        }
+    }
+
+    &__results {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
     }
 }
 

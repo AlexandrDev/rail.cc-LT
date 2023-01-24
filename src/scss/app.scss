@@ -8,7 +8,7 @@
 @import "libs/bootstrap-parts";
 
 @import "layout/typography";
-//@import "layout/inputs";
+@import "layout/inputs";
 @import "layout/buttons";
 
 @import "components/menu-list";
@@ -29,4 +29,6 @@
 /*
  * Index page
  */
-//@import "components/search-route";
+@import "components/search-route";
+@import "sections/hero";
+@import "pages/index";
