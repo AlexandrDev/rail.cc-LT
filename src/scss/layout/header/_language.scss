@@ -1,219 +1,210 @@
 .language {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 
-    &-is-open {
-        overflow: hidden;
+  &-is-open {
+    overflow: hidden;
 
-        .language__dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(0);
-        }
+    .language__dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
     }
+  }
 
+  &::after {
+    @include lg {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      left: 0;
+      bottom: -1px; //header border-bottom
+      z-index: 1;
+      background-color: var(--red-primary);
+      opacity: 0;
+      transition: opacity $transition_dropdowns;
+    }
+  }
+
+  &:hover {
     &::after {
-        @include lg {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 3px;
-            position: absolute;
-            left: 0;
-            bottom: -1px; //header border-bottom
-            z-index: 1;
-            background-color: var(--red-primary);
-            opacity: 0;
-            transition: opacity $transition_dropdowns;
-        }
+      @include lg {
+        opacity: 1;
+      }
     }
 
-    &:hover {
-        &::after {
-            @include lg {
-                opacity: 1;
-            }
-        }
+    .language__dropdown {
+      @include lg {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
 
-        .language__dropdown {
-            @include lg {
-                visibility: visible;
-                opacity: 1;
-                pointer-events: all;
-            }
-        }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    width: 36px;
+    height: 24px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #F2EEEB;
+    }
+  }
+
+  &__selector {
+    @include lg {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      cursor: pointer;
+      padding: 24px 8px 24px 16px;
+    }
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    transform-origin: center;
+    transition: transform $transition_dropdowns;
+
+    @include lg-max {
+      display: none;
+    }
+  }
+
+  &__dropdown {
+    opacity: 0;
+    visibility: hidden;
+
+    @include lg-max {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 100vw;
+      height: 100%;
+      transform: translateX(100%);
+      z-index: 3;
+      transition: all $transition_menus;
     }
 
-    &__icon {
-        display: flex;
-        justify-content: center;
-        width: 36px;
+    @include lg {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      min-width: 240px;
+      margin-top: 1px;
+      pointer-events: none;
+    }
+  }
+
+  &__mobile {
+    &-top {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      padding: 0 20px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--green-secondary);
+      }
+    }
+
+    &-close {
+      width: 24px;
+      height: 24px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__items {
+    overflow-y: auto;
+
+    @include lg-max {
+      height: calc(100% - 56px);
+    }
+
+    @include lg {
+      max-height: 49*8.5px;
+    }
+
+    &:after {
+      @include lg {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        display: block;
         height: 24px;
-
-        svg {
-            display: block;
-            width: 100%;
-            height: 100%;
-            border: 1px solid #F2EEEB;
-        }
-    }
-
-    &__selector {
-        @include lg {
-            display: flex;
-            align-items: center;
-            column-gap: 10px;
-            cursor: pointer;
-            padding: 24px 8px 24px 16px;
-        }
-    }
-
-    &__arrow {
-        width: 16px;
-        height: 16px;
-        transform-origin: center;
-        transition: transform $transition_dropdowns;
-
-        @include lg-max {
-            display: none;
-        }
-    }
-
-    &__dropdown {
-        background-color: var(--white);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+        pointer-events: none;
         opacity: 0;
-        visibility: hidden;
+        transition: opacity .4s ease;
+      }
+    }
 
-        @include lg-max {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 100%;
-            max-width: 100vw;
-            height: 100%;
-            transform: translateX(100%);
-            z-index: 3;
-            transition: all $transition_menu;
-        }
-
+    &_scrolling {
+      &:after {
         @include lg {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            display: block;
-            width: max-content;
-            min-width: 240px;
-            margin-top: 1px;
-            box-shadow: 0 8px 16px rgba(96, 82, 72, 0.16);
-            border-radius: 0 0 4px 4px;
-            overflow: hidden;
-            pointer-events: none;
-            transition: all $transition_dropdowns;
-            z-index: 1;
+          opacity: 1;
         }
+      }
+    }
+  }
+
+  &__item {
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 8px;
+
+    &-check {
+      width: 24px;
+      height: 24px;
+      visibility: hidden;
+
+      .language__item_selected & {
+        visibility: visible;
+      }
     }
 
-    &__mobile {
-        &-top {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 56px;
-            padding: 0 20px;
-
-            &:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -1px;
-                z-index: 1;
-                display: block;
-                width: 100%;
-                height: 2px;
-                background-color: var(--green-secondary);
-            }
-        }
-
-        &-close {
-            width: 24px;
-            height: 24px;
-
-            svg {
-                width: 100%;
-                height: 100%;
-            }
-        }
+    &-text {
+      flex: 1;
     }
 
-    &__items {
-        overflow-y: auto;
+    &-icon {
+      width: 26px;
+      height: 18px;
 
-        &:after {
-            @include lg {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 1;
-                display: block;
-                height: 24px;
-                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
-                pointer-events: none;
-                opacity: 0;
-                transition: opacity .4s ease;
-            }
-        }
-
-        &_scrolling {
-            &:after {
-                @include lg {
-                    opacity: 1;
-                }
-            }
-        }
-
-        @include lg-max {
-            height: calc(100vh - 56px);
-
-        }
-
-        @include lg {
-            max-height: 49*8.5px;
-        }
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #F2EEEB;
+      }
     }
-
-    &__item {
-        align-items: center;
-        justify-content: space-between;
-        column-gap: 8px;
-
-        &-check {
-            width: 24px;
-            height: 24px;
-            visibility: hidden;
-
-            .language__item_selected & {
-                visibility: visible;
-            }
-        }
-
-        &-text {
-            flex: 1;
-        }
-
-        &-icon {
-            width: 26px;
-            height: 18px;
-
-            svg {
-                display: block;
-                width: 100%;
-                height: 100%;
-                border: 1px solid #F2EEEB;
-            }
-        }
-    }
+  }
 }

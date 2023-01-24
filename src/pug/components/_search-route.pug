@@ -1,14 +1,13 @@
-#search-route-form.search-route
-  .search-route__inner
-    .search-route__title.like-h3 Search a route
-    .search-route-form
-      .search-route-form__input-group
-        .input-item
-          input(id="search-route-from" type="text", placeholder='From', ref="from", v-model='from').input
-        .input-item
-          input(id="search-route-to" type="text", placeholder='To', ref="to", v-model='to').input
-        a(href="javascript:", @click="swap").search-route-form__swap
-          svg(viewBox="0 0 21 25").search-route-form__swap-icon
-            path(fill-rule='evenodd', d='M15.414 0l5.414 5.414-5.414 5.414L14 9.414l3-3H5.414a3 3 0 0 0-3 3v2h-2v-2a5 5 0 0 1 5-5H17l-3-3L15.414 0zm3 13.414v2a3 3 0 0 1-3 3H3.828l3-3L5.414 14 0 19.414l5.414 5.414 1.414-1.414-3-3h11.586a5 5 0 0 0 5-5v-2h-2z')
-
-      button(@click="submit").search-route-form__button.button.button_green Search
+#search-route.search-route
+  .search-route__inputs
+    .search-route__input.input
+      input(id="search-route-from" type="text" placeholder='From?' ref="from" v-model='from').input__item
+      .input__icon
+        +svg('map')
+    .search-route__swap(@click="swap")
+      +svg('ArrowsLeftRight')
+    .search-route__input.input
+      input(id="search-route-to" type="text" placeholder='To?' ref="to" v-model='to').input__item
+      .input__icon
+        +svg('map')
+  button(@click="submit").search-route__button.button.button_red Search

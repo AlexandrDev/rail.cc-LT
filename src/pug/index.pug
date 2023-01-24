@@ -4,7 +4,14 @@ block variables
   - var title = 'Главная'
 
 block content
-  //include sections/_hero
+  +section-hero('Find train routes around the world', 'We are train enthusiast providing honest content since 1996', images_path+'hero-bg-1.svg')
+  section.index-search-route.container-xl
+    .row
+      .col-lg-10.offset-lg-1
+        include components/_search-route
+
+  section.index-popular-dests.container-xl(style="padding-block: 64px;")
+
   //include sections/_advantages
   //include sections/_breadcrumbs
   //include sections/_main-routes
