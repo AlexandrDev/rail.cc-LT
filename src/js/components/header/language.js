@@ -8,11 +8,13 @@ let $language = $('.language'),
     open_cls = 'language-is-open';
 
 $button.on(clickEvent, () => {
-    $body.addClass(open_cls)
+    if (isMobile())
+        $body.addClass(open_cls)
 })
 
 $close.on(clickEvent, () => {
-    $body.removeClass(open_cls)
+    if (isMobile())
+        $body.removeClass(open_cls)
 })
 
 

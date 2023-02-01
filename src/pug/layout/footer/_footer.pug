@@ -4,14 +4,14 @@ footer.footer
       .footer__subscription
         +socials()
         .footer__subscription-text
-          .like-h4 Подпишитесь, чтобы не пропустить ничего важного
+          .h4 Подпишитесь, чтобы не пропустить ничего важного
           p Предлагаем проверенные рекомендации и лайфхаки для путешествий на поездах.
   .footer__row
     .container-xl
       .footer__links-groups.row
         for col in [1,2]
           .footer-links-group.col-lg-6
-            .footer-links-group__title.like-h4 Interrail
+            .footer-links-group__title.h4 Interrail
             .footer-links-group__links.links-list
               for link in ['Eurail','Eurail Global Pass','Eurail Select Pass','Eurail ONE Country Pass','How to Eurail','First time Eurail','Eurail train reservations','Eurail night trains','Eurail ferries','Eurail buses','Search Eurail route']
                 .links-list__item
@@ -40,5 +40,5 @@ footer.footer
         .footer-copyright__logo
           +logo('logo-light')
         .footer-copyright__link
-          a(href="#").link Cookies
+          a(href="#") Cookies
         .footer-copyright__text ©1996-2022 rail.cc | railcc ® is a registered trademark

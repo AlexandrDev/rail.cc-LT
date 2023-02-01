@@ -13,25 +13,6 @@ a {
   transition: all $transition_links;
 }
 
-.link {
-  color: var(--link);
-  cursor: pointer;
-
-  &:hover {
-    color: var(--green);
-  }
-
-  &:focus:not(:active) {
-    background-color: var(--light-blue);
-  }
-
-  &_more {
-    font-size: 14px;
-    line-height: 24px;
-    border-bottom: 1px dashed;
-  }
-}
-
 p {
   font-size: 16px;
   line-height: 24px;
@@ -42,7 +23,7 @@ p {
   }
 }
 
-h1, .like-h1 {
+h1, .h1 {
   font-weight: 600;
   font-size: 22px;
   line-height: 30px;
@@ -53,7 +34,7 @@ h1, .like-h1 {
   }
 }
 
-h2, .like-h2 {
+h2, .h2 {
   font-weight: 600;
   font-size: 22px;
   line-height: 30px;
@@ -64,7 +45,7 @@ h2, .like-h2 {
   }
 }
 
-h3, .like-h3 {
+h3, .h3 {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
@@ -75,7 +56,7 @@ h3, .like-h3 {
   }
 }
 
-h4, .like-h4 {
+h4, .h4 {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;

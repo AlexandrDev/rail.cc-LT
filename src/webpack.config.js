@@ -1,5 +1,5 @@
 module.exports = {
-    mode: "development", // development/production
+    mode: "production", // development/production
     entry: {
         app: "./js/app.js"
     },

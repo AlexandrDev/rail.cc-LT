@@ -1,0 +1,96 @@
+.home {
+  &-search-route {
+    position: relative;
+
+    .search-route {
+      margin-top: -32px;
+    }
+  }
+
+  &-destinations {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include lg {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+  }
+
+  &-where-going {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 40px;
+
+    @include lg {
+      row-gap: 56px;
+      padding-top: 80px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &-travel-with {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include lg {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-advice {
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    @include md {
+      padding-top: 0;
+    }
+
+    @include lg {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &-routes-links {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include lg {
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &-partners {
+    padding-top: 24px;
+    padding-bottom: 40px;
+
+    @include lg {
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+
+    &__row {
+      align-items: center;
+
+      @include md-max {
+        row-gap: 24px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 14px;
+
+      @include lg {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+mixin btn-red(text, as_button)
+  if as_button
+    button.button.button_red&attributes(attributes)= text
+  else
+    a(href='#').button.button_red&attributes(attributes)= text
+
+mixin btn-green(text, as_button)
+  if as_button
+    button.button.button_green&attributes(attributes)= text
+  else
+    a(href='#').button.button_green&attributes(attributes)= text
+
+mixin btn-bordered(text, as_button)
+  if as_button
+    button.button.button_bordered&attributes(attributes)= text
+  else
+    a(href='#').button.button_bordered&attributes(attributes)= text
+
+mixin btn-arrow(text, as_button)
+  if as_button
+    button.button.button_arrow&attributes(attributes)= text
+      +svg('down').button__icon-arrow
+  else
+    a(href='#').button.button_arrow&attributes(attributes)= text
+      +svg('down').button__icon-arrow
+
+mixin btn-round-text(text, as_button)
+  if as_button
+    button.button-round-text&attributes(attributes)
+      +svg('arrow_right').button-round-text__arrow
+      .button-round-text__text= text
+  else
+    a(href='#').button-round-text&attributes(attributes)
+      .button-round-text__arrow
+        +svg('arrow_right').button-round-text__arrow-icon
+      .button-round-text__label= text

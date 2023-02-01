@@ -1,0 +1,7 @@
+.section-title {
+  margin-bottom: 20px;
+
+  @include lg {
+    margin-bottom: 32px;
+  }
+}

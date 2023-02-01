@@ -1,0 +1,59 @@
+.img-r-block {
+  @include md {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 20px;
+  }
+
+  @include lg {
+    column-gap: 24px;
+  }
+
+  &-image {
+    &-desk {
+      display: none;
+
+      @include md {
+        display: block;
+      }
+
+      &__src {
+        display: block;
+
+        @include md {
+          width: 240px;
+          height: auto;
+        }
+
+        @include lg {
+          width: 296px;
+        }
+      }
+    }
+
+    &-mob {
+      flex-shrink: 0;
+
+      @include md {
+        display: none;
+      }
+
+      &__src {
+        display: block;
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__title {
+    @include md-max {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      column-gap: 16px;
+    }
+  }
+}

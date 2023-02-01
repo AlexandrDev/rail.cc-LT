@@ -1,22 +1,145 @@
 extends ./layout/_layout
 
 block variables
-  - var title = 'Главная'
+    - var title = 'Главная'
 
 block content
-  +section-hero('Find train routes around the world', 'We are train enthusiast providing honest content since 1996', images_path+'hero-bg-1.svg')
-  section.index-search-route.container-xl
-    .row
-      .col-lg-10.offset-lg-1
-        include components/_search-route
+    +section-hero('hero-bg-1.svg', 'Find train routes around the world','We are train enthusiast providing honest content since 1996')
+    section.home-search-route.container-xl
+        .row
+            .col-lg-10.offset-lg-1
+                include components/_search-route
 
-  section.index-popular-dests.container-xl(style="padding-block: 64px;")
+    section.home-destinations.container-xl
+        .section-title.h2 Popular railway destinations
+        .destinations-cards
+            .destinations-cards__cards
+                for i in [1,2,3,4]
+                    for i in [1,2,3,4]
+                        +destination-card-min('/', 'dev/city-'+i+'.jpg', 'from City', 'to City')
+            .destinations-cards__show-more
+                +btn-arrow('Show more')
 
-  //include sections/_advantages
-  //include sections/_breadcrumbs
-  //include sections/_main-routes
-  //include sections/_popular-connections
-  //include sections/_route-detailed
-  //include sections/_following-list-mobile
-  //include sections/_blog-slider
-  //include sections/_partners-slider
+    section.section-steps
+        .container-xl
+            .section-steps__row.row
+                .col-lg-3
+                    .section-steps__title.h3 3 steps to book your tickets
+                .col-lg-9
+                    .section-steps__items.row.align-items-center
+                        +step-icon('01', 'Choose a direction').col-lg-4
+                        +step-icon('02', 'Choose the best route').col-lg-4
+                        +step-icon('03', 'Book and buy a ticket').col-lg-4
+
+    section.home-where-going.container-xl
+        .home-where-going__inner
+            .section-title.h2 Where are you going today?
+            .links-list.links-list_columns-4-2-1
+                for i in [1,2,3]
+                    for i in ['Tickets to Paris','Tickets to Prague','Tickets to Berlin','Tickets to Rome']
+                        .links-list__item
+                            a(href='#').link= i
+                for i in ['Tickets to Paris','Tickets to Prague','Tickets to Berlin']
+                    .links-list__item
+                        a(href='#').link= i
+
+        .booking-card
+            .booking-card__image
+                //img(src='').booking-card__image-src
+                img(src=images_path+'partners/booking.svg').booking-card__image-logo
+            .booking-card__content
+                .booking-card__text
+                    .h4 Негде остановиться?! <br>Более 1 000 000 вариантов на booking.com
+                .booking-card__button
+                    +btn-round-text('Забронировать')
+
+    section.home-travel-with.container-xl
+        .home-travel-with__title.h2 Travel with Rail.сс
+        .icon-text-columns
+            .row
+                .col-md-6
+                    .icon-text-column
+                        .icon-text-column__column
+                            +svg('travel-1').icon-text-column__icon
+                        .icon-text-column__column.icon-text-column__column_padding
+                            .icon-text-column__title.h4 Rail.cc explains how to travel individually by train
+                            .icon-text-column__text
+                                p The rail travel community. How to buy cheap train tickets. Interrail and Eurail pass information. Find prices and search for scenic travel routes.
+                .col-md-6
+                    .icon-text-column
+                        .icon-text-column__column
+                            +svg('travel-2').icon-text-column__icon
+                        .icon-text-column__column
+                            .icon-text-column__title.h4 Train ticket
+                            .icon-text-column__text
+                                p How to buy train tickets. Where to find prices. How to travel from A to B. Point to point train ticket information from the rail travel community.
+            .icon-text-columns__button-row
+                +btn-red('Find a route').icon-text-columns__button
+
+    section.home-advice.container-xl
+        .img-r-block
+            .img-r-block-image-desk
+                img(src=images_path+'advice.svg').img-r-block-image-desk__src
+            .img-r-block__content
+                .img-r-block__title.section-title.h2 Our advice
+                    .img-r-block-image-mob
+                        img(src=images_path+'advice.svg').img-r-block-image-mob__src
+                .links-list
+                    for i in ['Eurail pass information, help in our forum, travel routes, schedules and night trains','How to save reservation fees on Eurorail in Europe','Important tips on how to Eurail','What is Eurail','How to buy a reservation for night trains','Which trains are included. Where to buy']
+                        .links-list__item
+                            a(href='#').link= i
+
+    section.section-fw-img-l
+        .section-fw-img-l__container.container-xl
+            .section-fw-img-l__main-group
+                .section-fw-img-l-content
+                    .section-fw-img-l-content__title.h2 Train lines coverage
+                    .section-fw-img-l-content__intro Rail Europe sells tickets across Europe and our coverage is increasing all the time.
+                    .section-fw-img-l-content__text
+                        p We're official agents for rail and bus operators in the UK, France, Spain, Italy, Germany, Belgium, Austria, Switzerland, Luxembourg and the Netherlands.
+                .section-fw-img-l-image
+                    img(src=images_path+'coverage.svg').section-fw-img-l-image__src
+            .section-fw-img-l-icons
+                .iconed-label-row.row
+                    +iconed-label-item('suitcase', 'Join millions of people who use us every day').col-md-6.col-lg-4
+                    +iconed-label-item('route', 'Travel to thousands of destinations in 45 countries').col-md-6.col-lg-4
+                    +iconed-label-item('globe-2', 'We speak more than 30 languages').col-md-6.col-lg-4
+
+    section.blog-carousel.container-xl
+        .section-title.h2 Blog highlights
+        .blog-carousel-slider.swiper
+            .blog-carousel-wrapper.swiper-wrapper
+                for i in [1,2,3]
+                    for i in [1,2,3]
+                        .blog-carousel-slide.swiper-slide
+                            a(href='#').blog-card
+                                .blog-card-image
+                                    img(src=images_path + 'dev/blog-'+i+'.jpg')
+                                //.blog-card-video
+                                .blog-card__date 1st February 2016
+                                .blog-card__title.link Berlin to Prague by Train
+        .blog-carousel__button-row
+            +btn-red('Go to blog').blog-carousel__button
+
+    section.home-routes-links.container-xl
+        .section-title.h2 Train Routes
+        .links-list.links-list_columns-4-4-2
+            for i in [1,2,3,4]
+                for i in ['Austria','Belgium','Bosnia-Herzegovina','Bulgaria','Croatia','Czech Republic','Denmark','Estonia']
+                    .links-list__item
+                        a(href='#').link= i
+
+    section.home-partners.container-xl
+        .home-partners__row.row
+            .col-lg-4.col-md-7
+                .home-partners__title.h2 Partners
+                p Эти компании доверяют нам своих клиентов, мы гордимся нашей дружбой
+
+            .col-lg-8.col-md-5
+                .partners-logos
+                    picture
+                        source(srcset=images_path+'partners/partners-group-mobile.svg' media="(max-width: 991.98px)")
+                        img(src=images_path+'partners/partners-group-desktop.svg').partners-logos__groupped-img
+                    //-for i in ['interrail','DB','international','123go','kiwi','ACP','booking','trainline','omio','flixtrain','italo']
+                        .partners-logos__logo
+                            img(src=images_path+'partners/'+i+'.svg')
