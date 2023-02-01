@@ -1,8 +1,8 @@
-mixin section-hero(heading, text, bg)
+mixin section-hero(bg, heading, text)
   section.section-hero&attributes(attributes)
     .section-hero__bg
-      img(src=bg)
+      img(src=images_path + bg)
     .section-hero__container.container-xl
       .section-hero__content
-        .section-hero__heading.like-h1= heading
+        .section-hero__heading.h1= heading
         .section-hero__text= text

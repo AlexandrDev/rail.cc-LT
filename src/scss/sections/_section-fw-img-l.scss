@@ -1,0 +1,95 @@
+.section-fw-img-l {
+  padding-top: 40px;
+  padding-bottom: 24px;
+  background-color: var(--white);
+  overflow: hidden;
+
+  @include lg {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__main-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    border-bottom: 1px solid var(--beige);
+
+    @include md {
+      flex-direction: row;
+      column-gap: 24px;
+    }
+
+    @include lg {
+      border-bottom: 0;
+    }
+  }
+
+  &-content {
+    @include md {
+      flex-basis: calc(55.6% - 12px);
+    }
+
+    @include lg {
+      flex-basis: 58.33333333%;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+
+      @include lg {
+        margin-bottom: 32px;
+      }
+    }
+
+    &__intro {
+      font-weight: 600;
+    }
+
+    &__text {
+      margin-top: 12px;
+    }
+  }
+
+  &-image {
+    @include md-max {
+      margin-left: calc(-.5*var(--bs-gutter-x));
+      margin-right: calc(-.5*var(--bs-gutter-x));
+    }
+
+    @include md {
+      flex-basis: calc(44.4% - 12px);
+    }
+
+    @include lg {
+      position: absolute;
+      right: -130px;
+      bottom: -80px;
+      max-width: 60%;
+    }
+
+    &__src {
+      display: block;
+      object-fit: contain;
+
+      @include md-max {
+        width: 100%;
+        max-height: 400px;
+      }
+    }
+  }
+
+  &-icons {
+    padding-top: 24px;
+
+    @include lg {
+      width: 58.33333333%;
+      padding-top: 32px;
+    }
+  }
+
+}

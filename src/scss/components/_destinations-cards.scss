@@ -1,0 +1,44 @@
+.destinations-cards {
+  &:not(.shows) {
+    .destination-card-min {
+      &:nth-child(n+9) {
+        display: none;
+      }
+
+      @include lg-max {
+        &:nth-child(n+5) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__cards {
+    display: grid;
+    gap: 12px;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+  }
+
+  &__show-more {
+    margin-top: 20px;
+    text-align: center;
+
+    @include lg-max {
+      .button {
+        width: 100%;
+      }
+    }
+
+    @include lg {
+      margin-top: 32px;
+    }
+  }
+}

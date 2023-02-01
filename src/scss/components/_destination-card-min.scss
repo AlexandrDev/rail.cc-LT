@@ -1,0 +1,40 @@
+.destination-card-min {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow .3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(96, 82, 72, 0.16);
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding: 17px 16px;
+  }
+
+  &__from {
+    font-size: 14px;
+    line-height: 20px;
+    color: #475467;
+  }
+
+  &__to {
+    font-weight: 600;
+    color: var(--black);
+  }
+}

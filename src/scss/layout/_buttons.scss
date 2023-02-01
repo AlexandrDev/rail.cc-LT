@@ -4,47 +4,133 @@
   justify-content: center;
   height: 52px;
   padding: 0 32px;
-  border: 0;
+  border: 1px solid;
   border-radius: 4px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: #fff;
+  color: var(--black);
   cursor: pointer;
   transition: all $transition_buttons;
 
-  &:disabled,
-  &.disabled {
-    background-color: #E3D5CC;
-    pointer-events: none;
+  &__icon-arrow {
+    width: 16px;
+    height: 16px;
+    transition: all $transition_buttons;
+  }
+
+  &_red {
+    color: #fff;
+    background-color: var(--red-primary);
+    border-color: var(--red-primary);
+
+    &:hover {
+      background-color: #F78D74;
+      border-color: #F78D74;
+    }
+
+    &:active {
+      background-color: #E13A14;
+      border-color: #E13A14;
+    }
+  }
+
+  &_green {
+    color: var(--white);
+    background-color: var(--green-secondary);
+    border-color:  var(--green-secondary);
+
+    &:hover {
+      background-color: #C0D867;
+      border-color: #C0D867;
+    }
+
+    &:active {
+      background-color: #77A701;
+      border-color: #77A701;
+    }
+  }
+
+  &_bordered,
+  &_arrow {
+    background-color: transparent;
+    border-color: var(--brown);
+
+    &:hover {
+      border-color: #CFC1B8;
+    }
+
+    &:active {
+      border-color: var(--brown);
+    }
+  }
+
+  &_arrow {
+    column-gap: 8px;
+    padding-right: 26px;
+  }
+
+  &_top {
+    .button__icon-arrow {
+      transform: rotateZ(180deg);
+    }
   }
 
   &_thin {
     height: 44px;
   }
 
-  &_red {
-    background: var(--red-primary);
+  &:disabled,
+  &.disabled,
+  &_disabled {
+    background-color: #E3D5CC;
+    border-color: #E3D5CC;
+    pointer-events: none;
+  }
+}
 
-    &:hover {
-      background: #F78D74;
-    }
+.button-round-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+  transition: all $transition_links;
 
-    &:active {
-      background: #E13A14;
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--red-primary);
+    transition: all $transition_links;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      color: var(--white);
     }
   }
 
-  &_green {
-    background: var(--green-secondary);
+  &:hover {
+    color: var(--red-primary);
 
-    &:hover {
-      background: #C0D867;
+    .button-round-text__arrow {
+      background-color: #F78D74;
     }
+  }
 
-    &:active {
-      background: #77A701;
+  &:active {
+    color: #E13A14;
+
+    .button-round-text__arrow {
+      background-color: #E13A14;
     }
   }
 }

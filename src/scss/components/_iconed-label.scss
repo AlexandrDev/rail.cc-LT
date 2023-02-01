@@ -1,0 +1,36 @@
+.iconed-label {
+  &-row {
+    row-gap: 16px;
+
+    @include md {
+      --bs-gutter-x: 24px;
+    }
+
+    @include lg {
+      --bs-gutter-x: 32px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    gap: 16px;
+
+    @include lg {
+      flex-direction: column;
+    }
+
+    &__icon {
+      display: block;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    &__label {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--black);
+    }
+  }
+}

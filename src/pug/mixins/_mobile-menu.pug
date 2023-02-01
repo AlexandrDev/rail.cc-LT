@@ -1,0 +1,17 @@
+mixin main-menu-items(primary, secondary)
+    for item, index in primary
+        .main-menu__item.main-menu__item_parent
+            a(href='#' data-bs-target=`#menu-item-${index}`).main-menu__link
+                +svg(item.i).main-menu__link-icon
+                span.main-menu__link-text= item.n
+                +svg('down').main-menu__link-arrow
+            .main-menu__submenu.collapse.menu-list(id=`menu-item-${index}` data-bs-parent="#main-menu")
+                for sub in [1,2,3]
+                    .main-menu__item
+                        a(href='#').main-menu__link
+                            span.main-menu__link-text= sub
+    for item in secondary
+        .main-menu__item
+            a(href='#').main-menu__link
+                +svg(item.i).main-menu__link-icon
+                span.main-menu__link-text= item.n

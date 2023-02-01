@@ -11,4 +11,25 @@
       font-weight: 600;
     }
   }
+
+  &_columns-4-2-1 {
+    column-gap: 24px;
+
+    @include md {
+      column-count: 2;
+    }
+
+    @include lg {
+      column-count: 4;
+    }
+  }
+
+  &_columns-4-4-2 {
+    column-gap: 24px;
+    column-count: 2;
+
+    @include md {
+      column-count: 4;
+    }
+  }
 }

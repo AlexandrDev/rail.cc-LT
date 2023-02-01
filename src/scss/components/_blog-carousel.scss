@@ -1,0 +1,49 @@
+.blog-carousel {
+  padding-top: 40px;
+  padding-bottom: 24px;
+  overflow: hidden;
+
+  @include md {
+    padding-bottom: 32px;
+  }
+
+  @include lg {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  &-slider {
+    width: 100%;
+
+    @include lg-max {
+      overflow: visible;
+    }
+  }
+
+  &-slide {
+    width: 71.6vw;
+
+    @include sm {
+      width: 40vw;
+    }
+
+    @include md {
+      width: 26.4vw;
+    }
+  }
+
+  &__button-row {
+    margin-top: 24px;
+    text-align: center;
+
+    @include lg {
+      margin-top: 32px;
+    }
+  }
+
+  &__button {
+    @include lg-max {
+      width: 100%;
+    }
+  }
+}

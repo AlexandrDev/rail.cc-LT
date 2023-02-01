@@ -1,4 +1,6 @@
-/* Click event detection */
+/*
+ * Click event detection
+ */
 const isTouch = ('ontouchstart' in window || navigator.msMaxTouchPoints > 0);
 
 global.clickEvent = isTouch ? 'touchend' : 'click';

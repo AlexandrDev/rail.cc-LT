@@ -4,12 +4,36 @@
   --grey: #444444;
   --red-primary: #F24C26;
   --green-secondary: #96BF02;
+  --blue-link: #1A63D1;
+  --brown: #A68C77;
   --black: #000000;
+}
+
+$imagesPath: '../images/';
+
+$transition_links: .2s ease;
+$transition_inputs: .4s ease;
+$transition_buttons: .4s ease;
+$transition_dropdowns: .3s ease;
+$transition_menus: .3s ease;
+
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #F2EEEB;
+}
+
+img {
+  max-width: 100%;
 }
 
 
 /*
- * Bootstrap 5: override
+ * Bootstrap 5: overrides
  */
 .container {
   &,
@@ -18,6 +42,18 @@
   &-sm,
   &-xl {
     --bs-gutter-x: 40px;
+
+    @include md {
+      --bs-gutter-x: 48px;
+    }
+
+    @include xl {
+      max-width: 1180px;
+    }
+
+    @include xxl {
+      max-width: 1180px;
+    }
   }
 }
 
@@ -25,18 +61,14 @@
   --bs-gutter-x: 24px;
 }
 
-
-/*
- * Common
- */
-*, ::after, ::before {
-  box-sizing: border-box;
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
 }
 
-body {
-  position: relative;
-}
-
-img {
-  max-width: 100%;
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height $transition_dropdowns;
 }

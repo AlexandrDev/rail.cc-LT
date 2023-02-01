@@ -1,0 +1,6 @@
+mixin destination-card-min(link, image, from, to)
+    a(href= link).destination-card-min&attributes(attributes)
+        img(src=images_path + image).destination-card-min__image
+        .destination-card-min__col
+            .destination-card-min__from= from
+            .destination-card-min__to= to

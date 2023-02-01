@@ -1,33 +1,45 @@
 @import '../node_modules/normalize.css/normalize';
 @import '../node_modules/bootstrap/scss/bootstrap-grid';
+@import '../node_modules/swiper/swiper';
 
-@import "vars";
 @import "mixins";
 @import "gui";
-
-@import "libs/bootstrap-parts";
 
 @import "layout/typography";
 @import "layout/inputs";
 @import "layout/buttons";
+@import "layout/links";
 
 @import "components/menu-list";
 @import "components/socials";
 @import "components/links-list";
+@import "components/logo";
+@import "components/header";
+@import "components/header/main-menu";
+@import "components/header/hamburger";
+@import "components/header/language";
+@import "components/footer";
+@import "components/footer/footer-links-group";
+@import "components/footer/footer-copyright";
+@import "components/section-title";
 
-@import "layout/header/header";
-@import "layout/header/logo";
-@import "layout/header/main-menu";
-@import "layout/header/hamburger";
-@import "layout/header/language";
-
-@import "layout/footer/footer";
-@import "layout/footer/footer-links-group";
-@import "layout/footer/footer-copyright";
 
 /*
  * Index page
  */
 @import "components/search-route";
+@import "components/destination-card-min";
+@import "components/destinations-cards";
+@import "components/step-icon";
+@import "components/booking-card";
+@import "components/icon-text-columns";
+@import "components/icon-text-column";
+@import "components/partners-logos";
+@import "components/blog-carousel";
+@import "components/blog-card";
+@import "components/img-r-block";
+@import "components/iconed-label";
 @import "sections/hero";
-@import "pages/index";
+@import "sections/steps";
+@import "sections/section-fw-img-l";
+@import "pages/home";

@@ -1,0 +1,23 @@
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 16px;
+
+  &__svg {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+
+    @include lg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__text {
+    @include lg {
+      font-weight: 600;
+    }
+  }
+}

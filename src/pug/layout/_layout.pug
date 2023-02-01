@@ -1,8 +1,4 @@
-include ../mixins/_svg
-include ../mixins/_logo
-include ../mixins/_socials
-
-include ../sections/_hero
+include ../mixins/_mixins
 
 - var images_path = 'images/';
 
@@ -27,7 +23,7 @@ html(lang="ru")
   body(class=body_class)
     include header/_header
 
-    main.page-content
+    main.page
       block content
 
     include footer/_footer

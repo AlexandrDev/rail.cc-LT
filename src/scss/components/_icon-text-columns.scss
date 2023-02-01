@@ -1,0 +1,15 @@
+.icon-text-columns {
+  &__button-row {
+    margin-top: 4px;
+
+    @include lg {
+      padding-left: 48+16px;
+    }
+  }
+
+  &__button {
+    @include lg-max {
+      width: 100%;
+    }
+  }
+}

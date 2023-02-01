@@ -1,30 +1,12 @@
 -var primary = [{n:'Train tickets',i:'TrainSimple'},{n:'Interrail',i:'Ticket'},{n:'Travel guide',i:'globe'}];
 -var secondary = [{n:'Forum',i:'ChatsCircle'},{n:'Blog',i:'Pencil_Edit'},{n:'How it works',i:'Question'}];
 
-mixin mainMenuItems(menu_items)
-  for item, index in primary
-    .main-menu__item.main-menu__item_parent
-      a(href='#' data-bs-target=`#menu-item-${index}`).main-menu__link
-        +svg(item.i).main-menu__link-icon
-        span.main-menu__link-text= item.n
-        +svg('down').main-menu__link-arrow
-      .main-menu__submenu.collapse.menu-list(id=`menu-item-${index}` data-bs-parent="#main-menu")
-        for sub in [1,2,3]
-          .main-menu__item
-            a(href='#').main-menu__link
-              span.main-menu__link-text= sub
-  for item in secondary
-    .main-menu__item
-      a(href='#').main-menu__link
-        +svg(item.i).main-menu__link-icon
-        span.main-menu__link-text= item.n
-
 #main-menu.main-menu
   .main-menu__hamburger.d-lg-none
     include _hamburger
   .main-menu__container
     .main-menu__mobile-top.d-lg-none
     .main-menu__items.main-menu__items_with-icons
-      +mainMenuItems(menu_items)
+      +main-menu-items(primary, secondary)
       .main-menu__mobile-socials.d-lg-none
         +socials(true)

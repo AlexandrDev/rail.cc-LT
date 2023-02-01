@@ -1,0 +1,25 @@
+.section-steps {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--white);
+
+  &__title {
+    @include lg {
+      padding-right: 16px;
+    }
+  }
+
+  &__row {
+    @include lg-max {
+      row-gap: 20px;
+    }
+  }
+
+  &__items {
+    height: 100%;
+
+    @include lg-max {
+      row-gap: 12px;
+    }
+  }
+}

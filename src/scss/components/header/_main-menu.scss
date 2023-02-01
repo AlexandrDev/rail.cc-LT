@@ -160,6 +160,15 @@
   }
 
   &__submenu {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+
+    @include lg-max {
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
     @include lg {
       position: absolute;
       top: 100%;
